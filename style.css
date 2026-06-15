@@ -83,7 +83,7 @@ em { font-style: italic; font-weight: 400; }
   font-weight: 300;
   font-size: clamp(28px, 4.5vw, 54px);
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: 0.12em;
   margin-bottom: 64px;
 }
@@ -856,6 +856,26 @@ em { font-style: italic; font-weight: 400; }
   100% { transform: translateX(-50%); }
 }
 
+.reason__title-num {
+  font-size: 2.2em;
+  font-weight: 900;
+  display: inline;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.section__title .reason-title-line,
+.section__title .reason-title-line .accent,
+.section__title .reason-title-line .reason__title-num {
+  display: inline !important;
+  white-space: nowrap;
+}
+.reason .section__title {
+  line-height: 1.1;
+}
+
 /* ========== Reason ========== */
 .reason {
   background: linear-gradient(180deg, #fff 0%, #fff9f8 100%);
@@ -874,29 +894,41 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 0;
 }
 
-/* ブロックヘッダー帯 */
+/* ブロックヘッダー */
 .reason__heading {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400));
-  padding: 16px 20px;
+  position: relative;
+  padding: 24px 20px 20px;
   margin: 0;
+  border-bottom: 1px solid var(--salmon-100);
+  overflow: hidden;
 }
 .reason__num {
-  font-size: 28px;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  font-size: 88px;
   font-weight: 900;
-  color: rgba(255,255,255,0.35);
   line-height: 1;
-  flex-shrink: 0;
-  letter-spacing: -1px;
+  color: var(--salmon-100);
+  font-family: var(--serif);
+  letter-spacing: -4px;
+  user-select: none;
+  pointer-events: none;
 }
 .reason__heading-text {
-  font-size: 15px;
+  position: relative;
+  display: block;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-main);
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  padding-left: 4px;
+}
+.reason__heading-text .orange {
+  color: var(--salmon-600);
   font-weight: 700;
-  color: #fff;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
 }
 
 /* ブロック本文エリア */
