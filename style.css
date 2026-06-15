@@ -88,6 +88,21 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 64px;
 }
 .section__title span { display: block; }
+.empathy__sub {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-light, #999);
+  letter-spacing: 0.05em;
+  margin-top: -28px;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+.empathy__sub--accent {
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .section__title em { font-style: italic; }
 .accent {
   background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
@@ -110,7 +125,7 @@ em { font-style: italic; font-weight: 400; }
 .sp-only { display: none; }
 @media (max-width: 768px) {
   .sp-only { display: inline; }
-  .section-inner { padding: 100px 20px; }
+  .section-inner { padding: 60px 20px; }
 }
 
 /* ========== Aurora ========== */
@@ -167,7 +182,7 @@ em { font-style: italic; font-weight: 400; }
 .header {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 18px 0;
+  padding: 6px 0;
   background: rgba(255, 249, 248, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -235,11 +250,34 @@ em { font-style: italic; font-weight: 400; }
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(248, 121, 104, 0.4);
 }
+.header__cta-circle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--salmon-500), var(--gold));
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(248, 121, 104, 0.35);
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.header__cta-circle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(248, 121, 104, 0.45);
+}
 @media (max-width: 1024px) {
   .header__nav { display: none; }
 }
 @media (max-width: 768px) {
   .header__cta { display: none; }
+  .header__cta-circle { display: flex; }
 }
 
 /* ========== FV ========== */
@@ -361,11 +399,14 @@ em { font-style: italic; font-weight: 400; }
   text-transform: uppercase;
 }
 .fv__lead {
-  font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 0.3em;
-  color: var(--text-sub);
+  font-family: 'Yomogi', cursive;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  background: linear-gradient(135deg, var(--salmon-600), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin-bottom: 36px;
 }
 .fv__title {
@@ -611,8 +652,18 @@ em { font-style: italic; font-weight: 400; }
 .fv__cta-note {
   font-size: 11px;
   color: var(--text-light);
-  margin-top: 16px;
+  margin-bottom: 12px;
   letter-spacing: 0.12em;
+}
+.fv__cta-area {
+  position: relative;
+}
+.fv__cta {
+  position: relative;
+  z-index: 1;
+}
+.fv__cta-wrap {
+  position: relative;
 }
 
 /* Full-width CTA */
@@ -767,6 +818,7 @@ em { font-style: italic; font-weight: 400; }
 
 /* ========== Marquee ========== */
 .marquee {
+  display: none;
   position: relative;
   overflow: hidden;
   padding: 28px 0;
@@ -2222,6 +2274,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .fv__copy {
   text-align: left;
+  position: relative;
 }
 .fv__copy .brand-mark,
 .fv__copy .fv__lead {
@@ -2294,7 +2347,6 @@ em { font-style: italic; font-weight: 400; }
 /* FV右側ビジュアル */
 .fv__visual {
   position: relative;
-  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2309,6 +2361,14 @@ em { font-style: italic; font-weight: 400; }
   border-radius: 50%;
   border: 1px solid rgba(248, 121, 104, 0.35);
   z-index: 0;
+}
+.fv__cta-area > .fv__circle-frame {
+  top: 50%;
+  left: auto;
+  right: -160px;
+  transform: translateY(-50%);
+  opacity: 0.35;
+  pointer-events: none;
 }
 .fv__circle-frame-inner {
   position: absolute;
@@ -2403,7 +2463,7 @@ em { font-style: italic; font-weight: 400; }
   .fv__copy { text-align: center; }
   .fv__copy .brand-mark, .fv__copy .fv__lead, .fv__copy .fv__title, .fv__copy .fv__sub { text-align: center; }
   .fv__tags { justify-content: center; }
-  .fv__visual { height: 460px; }
+  .fv__visual { display: none; }
   .fv__circle-frame { width: 360px; height: 360px; }
   .fv__chip { padding: 10px 14px; }
   .chip-num { font-size: 22px; }
@@ -3106,6 +3166,18 @@ em { font-style: italic; font-weight: 400; }
 /* ========================================
    ▼▼▼ Empathy Accordion (v4.1) ▼▼▼
 ======================================== */
+.empathy .section__title span {
+  color: var(--text-main);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+.empathy .section__title span.accent {
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .empathy__accordion {
   max-width: 880px;
   margin: 0 auto 80px;
@@ -3198,6 +3270,14 @@ em { font-style: italic; font-weight: 400; }
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: rgba(255, 255, 255, 0.5);
+  animation: acc-icon-pulse 2s ease-in-out infinite;
+}
+.empathy__acc-item.is-open .empathy__acc-icon {
+  animation: none;
+}
+@keyframes acc-icon-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(248, 121, 104, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 0 6px rgba(248, 121, 104, 0); transform: scale(1.08); }
 }
 .empathy__acc-icon::before,
 .empathy__acc-icon::after {
@@ -3311,12 +3391,12 @@ em { font-style: italic; font-weight: 400; }
   .fv__chip--2 { bottom: 30%; left: 5%; }
   .fv__chip--3 { bottom: 5%; right: 12%; }
   .fv__circle-frame { width: 320px; height: 320px; }
-  .fv__visual { height: 420px; }
+  .fv__visual { height: auto; }
 }
 @media (max-width: 600px) {
   /* スマホ: チップを下に縦並びに */
   .fv__circle-frame { width: 280px; height: 280px; }
-  .fv__visual { height: 380px; }
+  .fv__visual { height: auto; }
   .fv__product { width: 200px; height: 280px; }
   .fv__chip {
     position: relative;
@@ -3325,6 +3405,9 @@ em { font-style: italic; font-weight: 400; }
   }
   .fv__chip--1, .fv__chip--2, .fv__chip--3 {
     display: none; /* スマホでは省略 */
+  }
+  .fv__scroll {
+    display: none;
   }
 }
 
@@ -3692,6 +3775,7 @@ body {
 
 /* ========== 低スペック端末向け: モバイルでアニメ軽減 ========== */
 @media (max-width: 600px) {
+  .fv { padding-top: 60px; }
   .blob { display: none; } /* スマホでは浮遊blob省略 */
   .aurora { filter: blur(40px); }
   .fv__particles span { animation-duration: 18s; }
@@ -3833,36 +3917,6 @@ body {
    ▼▼▼ SP: Hamburger & Drawer ▼▼▼
 ======================================== */
 
-/* ハンバーガーボタン */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 200;
-  flex-shrink: 0;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background: var(--text-main);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
-  transform-origin: center;
-}
-.hamburger.is-active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.hamburger.is-active span:nth-child(2) { opacity: 0; }
-.hamburger.is-active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
-
-@media (max-width: 1024px) {
-  .hamburger { display: flex; }
-}
 
 /* ドロワー */
 .drawer {
@@ -3954,7 +4008,7 @@ body.drawer-open {
 @media (max-width: 480px) {
   /* FV */
   .fv {
-    padding-top: 100px;
+    padding-top: 85px;
     padding-bottom: 80px;
     padding-left: 20px;
     padding-right: 20px;
@@ -3988,7 +4042,7 @@ body.drawer-open {
 
   /* section余白 */
   .section-inner {
-    padding: 72px 0;
+    padding: 44px 0;
   }
   .section__title {
     font-size: clamp(20px, 7vw, 30px);

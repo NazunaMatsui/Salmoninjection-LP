@@ -7,7 +7,7 @@
 <meta name="description" content="プロが選ぶ、サロン級の品質。PDRNコーティングスピキュール配合の塗るマイクロニードル美容液。1,800円(税別)で光を纏う肌へ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Marcellus&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho&family=Caveat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Marcellus&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho&family=Caveat&family=Yomogi&family=Klee+One&family=Yusei+Magic&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,9 +36,9 @@
       <a href="#howto"><span class="nav-num">04</span>How to</a>
     </nav>
     <a href="#cta" class="header__cta">¥1,800〜 / Buy Now</a>
-    <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <a href="#cta" class="header__cta-circle" aria-label="購入する">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </a>
   </div>
 </header>
 
@@ -98,10 +98,10 @@
       <p class="fv__lead reveal" data-delay="0">\ SNSで注目の成分配合 /</p>
       <h1 class="fv__title">
         <span class="fv__title-line fv__title-line--small reveal" data-delay="200">
-          夕方も、夜も。
+          夕方<span style="font-size: 0.8em;">も</span>、夜<span style="font-size: 0.8em;">も</span>。
         </span>
         <span class="fv__title-line reveal fv__title--accent" data-delay="500">
-          光を纏う肌へ
+          光を纏う肌<span style="font-size: 0.8em;">へ</span>
         </span>
       </h1>
       <p class="fv__brand reveal" data-delay="700">SC サーモン インジェクション</p>
@@ -111,53 +111,39 @@
         新感覚、塗った瞬間<br>
         角質層までじゅわっと浸透。
       </p>
-      <div class="fv__cta reveal" data-delay="1100">
-        <p class="fv__cta-note">※Instagram #pdrn 投稿数61.3万件(2026年6月時点)</p>
-        <a href="#cta" class="btn-primary btn-primary--full btn-shimmer magnetic-btn">
-          <span class="btn-label">今すぐ試してみる</span>
-          <span class="btn-arrow">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </a>
-        <a href="#line" class="btn-line">
-          <span>LINEで友だち追加する</span>
-        </a>
+      <div class="fv__cta-area">
+        <div class="fv__circle-frame reveal" data-delay="1000" aria-hidden="true">
+          <div class="fv__circle-frame-inner"></div>
+          <div class="fv__circle-text">
+            <svg viewBox="0 0 300 300" class="circle-text-svg">
+              <defs><path id="circlePath" d="M 150,150 m -120,0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0"/></defs>
+              <text font-size="14" letter-spacing="6" fill="#f87968" font-family="Italiana">
+                <textPath href="#circlePath">SC SALMON INJECTION · PDRN × SPICULE · ¥1800 · </textPath>
+              </text>
+            </svg>
+          </div>
+        </div>
+        <div class="fv__cta reveal" data-delay="1100">
+          <p class="fv__cta-note">※Instagram #pdrn 投稿数61.3万件(2026年6月時点)</p>
+          <div class="fv__cta-wrap">
+            <a href="#cta" class="btn-primary btn-primary--full btn-shimmer magnetic-btn">
+              <span class="btn-label">今すぐ試してみる</span>
+              <span class="btn-arrow">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+          <a href="#line" class="btn-line">
+            <span>LINEで友だち追加する</span>
+          </a>
+        </div>
       </div>
+
     </div>
 
     <!-- RIGHT: 商品ビジュアル -->
     <div class="fv__visual">
-      <!-- 円形フレーム + 写真風 -->
-      <div class="fv__circle-frame reveal" data-delay="1300">
-        <div class="fv__circle-frame-inner"></div>
-        <div class="fv__circle-text" aria-hidden="true">
-          <svg viewBox="0 0 300 300" class="circle-text-svg">
-            <defs><path id="circlePath" d="M 150,150 m -120,0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0"/></defs>
-            <text font-size="14" letter-spacing="6" fill="#f87968" font-family="Italiana">
-              <textPath href="#circlePath">SC SALMON INJECTION · PDRN × SPICULE · ¥1800 · </textPath>
-            </text>
-          </svg>
-        </div>
-      </div>
 
-      <!-- 商品モックアップ -->
-      <div class="fv__product reveal" data-delay="1300">
-        <div class="product-mockup">
-          <div class="product-mockup__shadow"></div>
-          <div class="product-mockup__bottle">
-            <div class="product-mockup__cap"></div>
-            <div class="product-mockup__label">
-              <span class="label-en">SC</span>
-              <span class="label-jp">サーモン<br>インジェクション</span>
-            </div>
-            <div class="product-mockup__liquid"></div>
-          </div>
-          <div class="product-mockup__glow"></div>
-          <div class="product-mockup__sparkles">
-            <span></span><span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
 
       <!-- 浮遊する小さなチップ -->
       <div class="fv__chip fv__chip--1 reveal" data-delay="1600">
@@ -205,6 +191,95 @@
   </div>
 </div>
 
+<!-- ========== 共感セクション(ジグザグ配置) ========== -->
+<section class="empathy" id="concept">
+  <div class="section-inner">
+    <p class="section__small-title reveal-up">— Your Worries —</p>
+    <h2 class="section__title reveal-up">
+      <span class="accent">こんなお悩み、</span>
+      <span>ありませんか？</span>
+    </h2>
+    <p class="empathy__sub reveal-up">ひとつでも当てはまったら、<br><span class="empathy__sub--accent">タップして確認してください</span></p>
+
+    <!-- アコーディオン形式: 見出しクリックで詳細表示 -->
+    <ul class="empathy__accordion">
+      <li class="empathy__acc-item reveal-up" data-delay="100">
+        <button class="empathy__acc-q" type="button">
+          <span class="empathy__acc-num">①</span>
+          <span class="empathy__acc-title">鏡をみるたび「あれ？」と思うことが増えた</span>
+          <span class="empathy__acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="empathy__acc-body">
+          <div class="empathy__acc-inner">
+            <p class="empathy__acc-text">朝は大丈夫なのに、<strong>夕方になると肌がどんより</strong>…。<br>「<strong>疲れてる？</strong>」って聞かれることが増えて、<br>なんだか自信が持てなくなってきた。<br>でも、エステに通う時間もお金もない。<br>かといって、<strong>このまま何もしないのは不安。</strong></p>
+          </div>
+        </div>
+      </li>
+      <li class="empathy__acc-item reveal-up" data-delay="200">
+        <button class="empathy__acc-q" type="button">
+          <span class="empathy__acc-num">②</span>
+          <span class="empathy__acc-title">ファンデを重ねてもくすみが隠れない</span>
+          <span class="empathy__acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="empathy__acc-body">
+          <div class="empathy__acc-inner">
+            <p class="empathy__acc-text"><strong>厚塗りすると余計に老けて見える</strong>…。<br>「もっと透明感がほしい」と思っても、何を使えばいいのかわからない。<br>SNSで話題の美容液は気になるけど、<strong>本当に効果があるのか不安。</strong><br>結局、<strong>ファンデで隠すしかない毎日。</strong></p>
+          </div>
+        </div>
+      </li>
+      <li class="empathy__acc-item reveal-up" data-delay="300">
+        <button class="empathy__acc-q" type="button">
+          <span class="empathy__acc-num">③</span>
+          <span class="empathy__acc-title">フェイスラインがぼやけて、たるみが気になる</span>
+          <span class="empathy__acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="empathy__acc-body">
+          <div class="empathy__acc-inner">
+            <p class="empathy__acc-text">昔はシャープだったフェイスライン。<br>今は、<strong>写真を撮るたびに加工したくなる。</strong><br>「<strong>二重あご？</strong>」「<strong>老けた？</strong>」自分で自分にショックを受ける。<br>マッサージしても、すぐに戻ってしまう。<br>根本から何とかしたいのに…。高額なエステには通えない。<br><strong>もっと手軽に、でも確実なケアはないの？</strong></p>
+          </div>
+        </div>
+      </li>
+      <li class="empathy__acc-item reveal-up" data-delay="400">
+        <button class="empathy__acc-q" type="button">
+          <span class="empathy__acc-num">④</span>
+          <span class="empathy__acc-title">高級美容液は試したいけど、値段が高くて続かない</span>
+          <span class="empathy__acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="empathy__acc-body">
+          <div class="empathy__acc-inner">
+            <p class="empathy__acc-text">1万円以上の美容液は気になるけど、<strong>毎月は続けられない</strong>…。<br>「<strong>コスパが良くて、しっかり実感できるもの</strong>」が欲しい。<br>でも、安いだけの美容液は不安。<br>成分も効果も、妥協したくない。<br><strong>そんな都合の良い美容液、本当にあるの？</strong></p>
+          </div>
+        </div>
+      </li>
+      <li class="empathy__acc-item reveal-up" data-delay="500">
+        <button class="empathy__acc-q" type="button">
+          <span class="empathy__acc-num">⑤</span>
+          <span class="empathy__acc-title">話題の成分が気になるけど、どれを選べばいいかわからない</span>
+          <span class="empathy__acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="empathy__acc-body">
+          <div class="empathy__acc-inner">
+            <p class="empathy__acc-text">PDRNやスピキュールって最近よく聞くけど、<strong>本当に効果があるの？</strong><br>種類が多すぎて、<strong>どれを選べばいいか分からない。</strong><br>せっかく買うなら、ちゃんと実感できるものを選びたい。<br>でも、<strong>高すぎるのは続けられない…。</strong></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="empathy__bridge-wrap reveal-up">
+      <div class="hand-arrow">
+        <svg viewBox="0 0 60 80" fill="none">
+          <path d="M30 5 Q35 30 28 55" stroke="#f87968" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+          <path d="M22 50 L28 60 L36 53" stroke="#f87968" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <p class="empathy__bridge">
+        その悩み、<br>
+        <span class="accent-bold">サロン級の品質</span>が変えていく。
+      </p>
+    </div>
+  </div>
+</section>
+
 <!-- ========== Concept Statement(雑誌の見開き風) ========== -->
 <section class="statement">
   <div class="statement__layout">
@@ -232,90 +307,6 @@
       <div class="statement__sign reveal-up">
         <span class="sign-jp">— SC Salmon Injection —</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 共感セクション(ジグザグ配置) ========== -->
-<section class="empathy" id="concept">
-  <div class="section-inner">
-    <p class="section__small-title reveal-up">— Your Worries —</p>
-    <h2 class="section__title reveal-up">
-      <span>こんなお悩み、</span>
-      <span class="accent">ありませんか？</span>
-    </h2>
-
-    <!-- アコーディオン形式: 見出しクリックで詳細表示 -->
-    <ul class="empathy__accordion">
-      <li class="empathy__acc-item reveal-up" data-delay="100">
-        <button class="empathy__acc-q" type="button">
-          <span class="empathy__acc-num">01</span>
-          <span class="empathy__acc-title">夕方、肌がくすんで見える</span>
-          <span class="empathy__acc-icon" aria-hidden="true"></span>
-        </button>
-        <div class="empathy__acc-body">
-          <div class="empathy__acc-inner">
-            <span class="empathy__check">✓</span>
-            <p class="empathy__acc-text">朝はキレイだったのに、夕方鏡を見ると顔が暗く、疲れた印象に見える。化粧直しをしても、なんだか冴えない。</p>
-            <p class="empathy__acc-tag">— くすみ悩み —</p>
-          </div>
-        </div>
-      </li>
-      <li class="empathy__acc-item reveal-up" data-delay="200">
-        <button class="empathy__acc-q" type="button">
-          <span class="empathy__acc-num">02</span>
-          <span class="empathy__acc-title">高い美容液でも実感できない</span>
-          <span class="empathy__acc-icon" aria-hidden="true"></span>
-        </button>
-        <div class="empathy__acc-body">
-          <div class="empathy__acc-inner">
-            <span class="empathy__check">✓</span>
-            <p class="empathy__acc-text">1万円超の高級美容液を試しても、はっきりとした変化が感じられない。「これだ！」という1本にまだ出会えていない。</p>
-            <p class="empathy__acc-tag">— 高級美容液難民 —</p>
-          </div>
-        </div>
-      </li>
-      <li class="empathy__acc-item reveal-up" data-delay="300">
-        <button class="empathy__acc-q" type="button">
-          <span class="empathy__acc-num">03</span>
-          <span class="empathy__acc-title">エステに通う時間とお金がない</span>
-          <span class="empathy__acc-icon" aria-hidden="true"></span>
-        </button>
-        <div class="empathy__acc-body">
-          <div class="empathy__acc-inner">
-            <span class="empathy__check">✓</span>
-            <p class="empathy__acc-text">本当はサロンに通いたい。でも、月に何回も通う時間も金銭的な余裕もない。自宅で同じレベルのケアができたら…。</p>
-            <p class="empathy__acc-tag">— サロン通い卒業 —</p>
-          </div>
-        </div>
-      </li>
-      <li class="empathy__acc-item reveal-up" data-delay="400">
-        <button class="empathy__acc-q" type="button">
-          <span class="empathy__acc-num">04</span>
-          <span class="empathy__acc-title">触れたくなるハリ・ツヤが欲しい</span>
-          <span class="empathy__acc-icon" aria-hidden="true"></span>
-        </button>
-        <div class="empathy__acc-body">
-          <div class="empathy__acc-inner">
-            <span class="empathy__check">✓</span>
-            <p class="empathy__acc-text">最近ハリがなくなってきた気がする。いきいきとした若々しい印象を取り戻したい。鏡を見るたびに自信が持てる肌へ。</p>
-            <p class="empathy__acc-tag">— ハリ・ツヤ不足 —</p>
-          </div>
-        </div>
-      </li>
-    </ul>
-
-    <div class="empathy__bridge-wrap reveal-up">
-      <div class="hand-arrow">
-        <svg viewBox="0 0 60 80" fill="none">
-          <path d="M30 5 Q35 30 28 55" stroke="#f87968" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
-          <path d="M22 50 L28 60 L36 53" stroke="#f87968" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
-      <p class="empathy__bridge">
-        その悩み、<br>
-        <span class="accent-bold">サロン級の品質</span>が変えていく。
-      </p>
     </div>
   </div>
 </section>
@@ -1000,7 +991,7 @@
   <div class="sticky-cta__inner">
     <div class="sticky-cta__info">
       <span class="sticky-cta__label">SC SALMON INJECTION</span>
-      <span class="sticky-cta__price">¥1,800 <small>(税別) / 2g</small></span>
+      <span class="sticky-cta__price">¥1,980 <small>(税込)</small></span>
     </div>
     <a href="#cta" class="sticky-cta__btn">
       今すぐ試す
