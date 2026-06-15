@@ -856,6 +856,238 @@ em { font-style: italic; font-weight: 400; }
   100% { transform: translateX(-50%); }
 }
 
+/* ========== Reason ========== */
+.reason {
+  background: linear-gradient(180deg, #fff 0%, #fff9f8 100%);
+}
+
+/* ブロック共通 */
+.reason__block {
+  position: relative;
+  margin-bottom: 48px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(232, 90, 74, 0.08);
+  overflow: hidden;
+}
+.reason__block:last-child {
+  margin-bottom: 0;
+}
+
+/* ブロックヘッダー帯 */
+.reason__heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400));
+  padding: 16px 20px;
+  margin: 0;
+}
+.reason__num {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.35);
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -1px;
+}
+.reason__heading-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+/* ブロック本文エリア */
+.reason__body {
+  padding: 20px 18px 24px;
+}
+.reason__text {
+  font-size: 13px;
+  line-height: 2;
+  color: var(--text-sub);
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+}
+.reason__text:last-child {
+  margin-bottom: 0;
+}
+.reason__text strong {
+  color: var(--salmon-600);
+  font-weight: 700;
+}
+.reason__text--accent {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+  padding: 12px 0 0;
+  border-top: 1px dashed var(--salmon-200);
+  margin-top: 14px;
+}
+
+/* コールアウトボックス（独自構造） */
+.reason__box {
+  background: linear-gradient(135deg, #fff5f3, #fffaf9);
+  border: 1.5px solid var(--salmon-300);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+.reason__box-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--salmon-600);
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.reason__box-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.reason__box-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+.reason__box-layer {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--salmon-500);
+  border-radius: 4px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.reason__box-layer--inner {
+  background: var(--gold);
+}
+.reason__box-row-text {
+  font-size: 12px;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+/* 成分バッジグリッド */
+.reason__ingredient-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.reason__ingredient-item {
+  background: #fff;
+  border: 1.5px solid var(--salmon-100);
+  border-radius: 10px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.reason__ingredient-name {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--salmon-600);
+  line-height: 1.4;
+}
+.reason__ingredient-desc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+/* 比較テーブル */
+.reason__compare {
+  margin: 16px 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1.5px solid var(--salmon-200);
+}
+/* ヘッダー行 */
+.reason__compare-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.reason__compare-head {
+  padding: 10px 8px;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.4;
+}
+.reason__compare-head--ours {
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400));
+  color: #fff;
+}
+.reason__compare-head--others {
+  background: #e8e8e8;
+  color: #888;
+}
+/* データ行 */
+.reason__compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--salmon-100);
+}
+.reason__compare-row:nth-child(even) .reason__compare-cell {
+  background: #fdf6f4;
+}
+.reason__compare-row:nth-child(even) .reason__compare-cell--others {
+  background: #f7f7f7;
+}
+.reason__compare-label-row {
+  grid-column: 1 / -1;
+  background: #fff0ee;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--salmon-600);
+  border-top: 1px solid var(--salmon-100);
+}
+.reason__compare-cell {
+  padding: 10px 10px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text-sub);
+  text-align: center;
+  background: #fff;
+}
+.reason__compare-cell--ours {
+  color: var(--text-main);
+  font-weight: 600;
+  border-right: 1px solid var(--salmon-100);
+}
+.reason__compare-cell--others {
+  background: #fafafa;
+  color: #aaa;
+}
+.reason__compare-cell small {
+  display: block;
+  font-size: 10px;
+  color: #bbb;
+  font-weight: 400;
+}
+.reason__compare-cell .check {
+  display: inline-block;
+  color: var(--salmon-500);
+  font-weight: 800;
+  font-size: 13px;
+}
+.reason__compare-cell .cross {
+  display: inline-block;
+  color: #ccc;
+  font-size: 13px;
+}
+
 /* ========== Statement ========== */
 .statement {
   position: relative;
