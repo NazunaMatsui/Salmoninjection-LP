@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "lp-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8765"],
+      "cwd": "/Users/nazunamatsui/Downloads/SC_Salmon_LP",
+      "port": 8765,
+      "autoPort": false
+    }
+  ]
+}
