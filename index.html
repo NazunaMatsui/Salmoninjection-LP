@@ -36,8 +36,23 @@
       <a href="#howto"><span class="nav-num">04</span>How to</a>
     </nav>
     <a href="#cta" class="header__cta">¥1,800〜 / Buy Now</a>
+    <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- モバイルドロワーナビ -->
+<div class="drawer" aria-hidden="true">
+  <nav class="drawer__nav">
+    <a href="#concept" class="drawer__link"><span class="drawer__num">01</span>Concept</a>
+    <a href="#mechanism" class="drawer__link"><span class="drawer__num">02</span>Mechanism</a>
+    <a href="#voice" class="drawer__link"><span class="drawer__num">03</span>Voice</a>
+    <a href="#howto" class="drawer__link"><span class="drawer__num">04</span>How to</a>
+  </nav>
+  <a href="#cta" class="drawer__cta">¥1,800〜 / Buy Now</a>
+</div>
+<div class="drawer-overlay"></div>
 
 <!-- ========== FV(MAGAZINE COVER風) ========== -->
 <section class="fv" id="top">
@@ -80,34 +95,33 @@
   <div class="fv__layout">
     <!-- LEFT: コピー -->
     <div class="fv__copy">
-      <p class="brand-mark reveal">— New Arrival —</p>
-      <p class="fv__lead reveal" data-delay="200">プロが選ぶ、サロン級の品質。</p>
+      <p class="fv__lead reveal" data-delay="0">\ SNSで注目の成分配合 /</p>
       <h1 class="fv__title">
-        <span class="fv__title-line reveal" data-delay="400">
-          <em>"白さ"</em>ではなく、
+        <span class="fv__title-line fv__title-line--small reveal" data-delay="200">
+          夕方も、夜も。
         </span>
-        <span class="fv__title-line reveal fv__title--accent" data-delay="700">
-          光を纏う肌へ。
+        <span class="fv__title-line reveal fv__title--accent" data-delay="500">
+          光を纏う肌へ
         </span>
       </h1>
-      <p class="fv__sub reveal" data-delay="1000">
-        PDRN <span class="dot">×</span> スピキュール<br>
-        塗るマイクロニードル美容液。
+      <p class="fv__brand reveal" data-delay="700">SC サーモン インジェクション</p>
+      <p class="fv__price-tag reveal" data-delay="800">¥1,980</p>
+      <p class="fv__sub reveal" data-delay="900">
+        PDRN × スピキュール × 7種成分<br>
+        新感覚、塗った瞬間<br>
+        角質層までじゅわっと浸透。
       </p>
-      <!-- 手書き風タグ -->
-      <div class="fv__tags reveal" data-delay="1200">
-        <span class="hand-tag">#PDRN</span>
-        <span class="hand-tag">#塗るサーモン注入</span>
-        <span class="hand-tag">#サロン級</span>
-      </div>
-      <div class="fv__cta reveal" data-delay="1500">
-        <a href="#cta" class="btn-primary magnetic-btn">
+      <div class="fv__cta reveal" data-delay="1100">
+        <p class="fv__cta-note">※Instagram #pdrn 投稿数61.3万件(2026年6月時点)</p>
+        <a href="#cta" class="btn-primary btn-primary--full btn-shimmer magnetic-btn">
           <span class="btn-label">今すぐ試してみる</span>
           <span class="btn-arrow">
             <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </a>
-        <p class="fv__cta-note">※送料無料・1分で簡単購入</p>
+        <a href="#line" class="btn-line">
+          <span>LINEで友だち追加する</span>
+        </a>
       </div>
     </div>
 

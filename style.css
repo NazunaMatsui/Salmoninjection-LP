@@ -377,6 +377,7 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 44px;
 }
 .fv__title-line { display: block; }
+.fv__title-line--small { font-size: 0.6em; font-weight: 300; }
 .fv__title em {
   font-style: italic;
   font-family: var(--serif);
@@ -406,6 +407,26 @@ em { font-style: italic; font-weight: 400; }
   color: var(--salmon-500);
   font-weight: 400;
   margin: 0 8px;
+}
+.fv__brand {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  color: var(--text-sub);
+  margin-bottom: 6px;
+}
+.fv__price-tag {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, var(--salmon-600), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 32px;
+  line-height: 1.2;
 }
 
 /* Product Mockup */
@@ -593,6 +614,67 @@ em { font-style: italic; font-weight: 400; }
   margin-top: 16px;
   letter-spacing: 0.12em;
 }
+
+/* Full-width CTA */
+.btn-primary--full {
+  width: 100%;
+  display: flex;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0%   { left: -100%; }
+  60%  { left: 150%; }
+  100% { left: 150%; }
+}
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+.btn-shimmer:hover::before { animation-play-state: paused; }
+
+/* LINE Button */
+.btn-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 18px 24px;
+  margin-top: 14px;
+  background: #06C755;
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  border-radius: 50px;
+  box-shadow: 0 10px 28px rgba(6, 199, 85, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+.btn-line::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: skewX(-20deg);
+  animation: shimmer 2.4s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+.btn-line:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(6, 199, 85, 0.4);
+}
+.btn-line:hover::before { animation-play-state: paused; }
 .fv__scroll {
   position: absolute;
   bottom: 32px;
@@ -3744,6 +3826,388 @@ body {
 .tech__ring {
   animation: ring-rotate 12s linear infinite !important;
   transform-origin: center center !important;
+}
+
+
+/* ========================================
+   ▼▼▼ SP: Hamburger & Drawer ▼▼▼
+======================================== */
+
+/* ハンバーガーボタン */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text-main);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+  transform-origin: center;
+}
+.hamburger.is-active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.is-active span:nth-child(2) { opacity: 0; }
+.hamburger.is-active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 1024px) {
+  .hamburger { display: flex; }
+}
+
+/* ドロワー */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(320px, 80vw);
+  height: 100dvh;
+  background: rgba(255, 249, 248, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 40px 60px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 1px solid rgba(255, 200, 195, 0.3);
+}
+.drawer.is-open {
+  transform: translateX(0);
+}
+.drawer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 48px;
+}
+.drawer__link {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 20px 0;
+  font-family: var(--display-alt);
+  font-size: 15px;
+  letter-spacing: 0.25em;
+  color: var(--text-main);
+  border-bottom: 1px solid rgba(255, 200, 195, 0.3);
+  transition: color 0.3s, transform 0.3s;
+}
+.drawer__link:first-child { border-top: 1px solid rgba(255, 200, 195, 0.3); }
+.drawer__link:hover { color: var(--salmon-500); transform: translateX(4px); }
+.drawer__num {
+  font-size: 10px;
+  color: var(--salmon-500);
+  letter-spacing: 0.1em;
+}
+.drawer__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-family: var(--display-alt);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--salmon-500), var(--salmon-400), var(--gold));
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(248, 121, 104, 0.35);
+  text-align: center;
+}
+
+/* オーバーレイ */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 34, 38, 0.35);
+  z-index: 140;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.drawer-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ドロワー開いた時にbodyをロック */
+body.drawer-open {
+  overflow: hidden;
+}
+
+
+/* ========================================
+   ▼▼▼ SP: Mobile Fine-tuning ▼▼▼
+======================================== */
+
+@media (max-width: 480px) {
+  /* FV */
+  .fv {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .fv__layout {
+    gap: 28px;
+  }
+  .fv__title {
+    font-size: clamp(30px, 9.5vw, 44px);
+    letter-spacing: 0.06em;
+  }
+  .fv__sub {
+    font-size: 12px;
+    line-height: 2;
+  }
+  .fv__tags { gap: 8px; }
+  .hand-tag { font-size: 15px; padding: 6px 14px; }
+
+  /* ボタン タッチ最小44px確保 */
+  .btn-primary {
+    padding: 16px 28px;
+    font-size: 13px;
+    min-height: 52px;
+  }
+  .btn-primary--large {
+    padding: 18px 36px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* section余白 */
+  .section-inner {
+    padding: 72px 0;
+  }
+  .section__title {
+    font-size: clamp(20px, 7vw, 30px);
+    margin-bottom: 36px;
+    letter-spacing: 0.08em;
+  }
+
+  /* Statement */
+  .statement {
+    padding: 80px 0;
+  }
+  .statement__title {
+    font-size: clamp(32px, 10vw, 50px);
+  }
+  .statement__lead {
+    font-size: 14px;
+    line-height: 2.2;
+  }
+  .statement__num {
+    font-size: 56px;
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .stats__item {
+    padding: 36px 14px;
+  }
+  .stats__item--big {
+    grid-column: span 2;
+  }
+
+  /* Benefit階段 → スマホでフラット */
+  .benefit__list--stairs {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .benefit__item--1,
+  .benefit__item--2,
+  .benefit__item--3 {
+    margin-top: 0;
+  }
+  .benefit__item {
+    padding: 48px 24px 36px;
+  }
+
+  /* Mechanism Timeline */
+  .mechanism__t-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-bottom: 48px;
+  }
+  .mechanism__t-content {
+    padding: 24px 20px;
+  }
+  .mechanism__t-title {
+    font-size: 22px;
+  }
+
+  /* Ingredients bento */
+  .ingredients__bento {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .ingredient--hero {
+    grid-column: span 2;
+    padding: 32px 20px !important;
+  }
+  .ingredient--hero .ingredient__name {
+    font-size: 24px !important;
+  }
+  .ingredient--wide {
+    grid-column: span 2;
+  }
+  .ingredient {
+    padding: 24px 14px;
+  }
+
+  /* Voice masonry */
+  .voice__masonry {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .voice__item {
+    padding: 48px 22px 28px;
+  }
+
+  /* How To */
+  .howto__list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .howto__item {
+    padding: 36px 22px;
+  }
+  .howto__img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 24px;
+  }
+
+  /* Compare */
+  .compare__row {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    padding: 12px 6px;
+  }
+  .compare__row > div {
+    font-size: 10px;
+    padding: 3px;
+  }
+  .compare__cell-product strong {
+    font-size: 12px;
+  }
+
+  /* FAQ */
+  .faq__q {
+    padding: 22px 18px;
+    gap: 14px;
+  }
+  .faq__q-text {
+    font-size: 14px;
+  }
+  .faq__a {
+    padding: 0 18px;
+  }
+  .faq__item.is-open .faq__a {
+    padding: 0 18px 22px;
+  }
+
+  /* CTA Final */
+  .cta-final {
+    padding: 80px 20px 100px;
+  }
+  .cta-final__price {
+    padding: 28px 28px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .cta-final__price-num {
+    font-size: clamp(42px, 12vw, 60px);
+  }
+
+  /* Sticky CTA */
+  .sticky-cta__inner {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+  .sticky-cta__label {
+    font-size: 10px;
+  }
+  .sticky-cta__price {
+    font-size: 16px;
+  }
+  .sticky-cta__btn {
+    padding: 12px 16px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  /* Empathy accordion */
+  .empathy__acc-q {
+    padding: 18px 16px;
+    gap: 12px;
+  }
+  .empathy__acc-num {
+    font-size: 24px;
+    width: 36px;
+  }
+  .empathy__acc-title {
+    font-size: 14px;
+  }
+  .empathy__acc-inner {
+    padding: 0 16px 20px 68px;
+  }
+  .empathy__acc-inner .empathy__check {
+    left: 28px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 11px;
+  }
+
+  /* Magazine */
+  .magazine__layout--1,
+  .magazine__layout--2,
+  .magazine__layout--3 {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .magazine__title {
+    font-size: clamp(26px, 8vw, 40px);
+  }
+  .magazine__desc {
+    font-size: 13px;
+    line-height: 2.2;
+  }
+  .magazine__quote {
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 60px 20px 80px;
+  }
+  .footer__links {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Marquee */
+  .marquee__item {
+    font-size: 15px;
+  }
+  .marquee {
+    padding: 20px 0;
+  }
 }
 
 

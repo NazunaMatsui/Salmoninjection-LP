@@ -205,4 +205,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   countEls.forEach(el => countObserver.observe(el));
 
+  /* ---------- Hamburger / Drawer ---------- */
+  const hamburger = document.querySelector('.hamburger');
+  const drawer = document.querySelector('.drawer');
+  const overlay = document.querySelector('.drawer-overlay');
+  const drawerLinks = document.querySelectorAll('.drawer__link, .drawer__cta');
+
+  function openDrawer() {
+    hamburger.classList.add('is-active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('is-active');
+    document.body.classList.add('drawer-open');
+  }
+
+  function closeDrawer() {
+    hamburger.classList.remove('is-active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    overlay.classList.remove('is-active');
+    document.body.classList.remove('drawer-open');
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.contains('is-active') ? closeDrawer() : openDrawer();
+    });
+  }
+  if (overlay) overlay.addEventListener('click', closeDrawer);
+  drawerLinks.forEach(link => link.addEventListener('click', closeDrawer));
+
 });
