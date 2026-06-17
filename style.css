@@ -911,7 +911,7 @@ em { font-style: italic; font-weight: 400; }
   top: -20px;
   left: 10px;
   font-size: 88px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   color: var(--salmon-100);
   font-family: var(--serif);
@@ -954,6 +954,29 @@ em { font-style: italic; font-weight: 400; }
   color: var(--salmon-600);
   font-weight: 700;
 }
+.reason__text-large {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--salmon-600);
+  display: inline;
+}
+.reason__text-sub {
+  font-size: 11px;
+  color: #bbb;
+  display: block;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+.reason__accent-brand {
+  display: inline-block;
+  font-size: 18px;
+  font-family: var(--serif);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 .reason__text--accent {
   font-size: 14px;
   font-weight: 700;
@@ -962,6 +985,7 @@ em { font-style: italic; font-weight: 400; }
   padding: 12px 0 0;
   border-top: 1px dashed var(--salmon-200);
   margin-top: 14px;
+  font-family: var(--serif);
 }
 
 /* コールアウトボックス（独自構造） */
@@ -971,6 +995,14 @@ em { font-style: italic; font-weight: 400; }
   border-radius: 10px;
   padding: 14px 16px;
   margin: 16px 0;
+}
+.reason__box-img {
+  display: block;
+  width: 88%;
+  margin: 0 auto 14px;
+  border-radius: 8px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 45%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 45%, transparent 100%);
 }
 .reason__box-title {
   font-size: 12px;
@@ -1196,10 +1228,22 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== Empathy ========== */
+.section-chevron {
+  width: 100%;
+  line-height: 0;
+  background: #ffffff;
+}
+.section-chevron svg {
+  width: 100%;
+  height: 48px;
+  display: block;
+}
 .empathy {
   position: relative;
   background: linear-gradient(180deg, transparent, rgba(255, 245, 243, 0.7));
-  overflow: hidden;
+}
+.empathy .section-inner {
+  padding-bottom: 0;
 }
 .empathy::before {
   content: 'WORRIES';
@@ -3453,7 +3497,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .empathy__accordion {
   max-width: 880px;
-  margin: 0 auto 80px;
+  margin: 0 auto 32px;
   position: relative;
   z-index: 1;
 }
