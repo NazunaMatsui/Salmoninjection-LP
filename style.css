@@ -1774,6 +1774,66 @@ em { font-style: italic; font-weight: 400; }
   margin-top: 16px;
   letter-spacing: 0.1em;
 }
+.cta-mid__sub {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--text-main);
+  margin-bottom: 40px;
+  margin-top: -24px;
+}
+
+/* ========== Howto lead ========== */
+.howto__lead {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-light);
+  letter-spacing: 0.12em;
+  margin-bottom: 48px;
+  margin-top: -16px;
+}
+
+/* ========== 使用上の注意 ========== */
+.caution {
+  padding: 80px 0;
+  background: linear-gradient(180deg, rgba(255,248,245,0.6) 0%, rgba(255,255,255,0.4) 100%);
+}
+.caution__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(248, 185, 175, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+}
+.caution__list li {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(248, 185, 175, 0.15);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.caution__list li:last-child {
+  border-bottom: none;
+}
+.caution__list li::before {
+  content: "—";
+  color: var(--salmon-300);
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-top: 2px;
+}
 
 /* ========== Benefit ========== */
 .benefit__lead {
@@ -3553,7 +3613,7 @@ em { font-style: italic; font-weight: 400; }
   display: flex;
   gap: 24px;
   width: max-content;
-  animation: voice-scroll 28s linear infinite;
+  animation: voice-scroll 50s linear infinite;
   padding: 8px 0;
 }
 .voice__track:hover {
