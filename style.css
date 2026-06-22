@@ -901,17 +901,13 @@ em { font-style: italic; font-weight: 400; }
   margin: 0;
   border-bottom: 1px solid var(--salmon-100);
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  min-height: 80px;
 }
 .reason__num {
   position: absolute;
-  top: -20px;
+  top: -8px;
   left: 10px;
   font-size: 88px;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 1;
   color: var(--salmon-100);
   font-family: var(--serif);
@@ -928,8 +924,7 @@ em { font-style: italic; font-weight: 400; }
   color: var(--text-main);
   line-height: 1.6;
   letter-spacing: 0.1em;
-  text-align: right;
-  margin-top: 16px;
+  padding-left: 4px;
 }
 .reason__heading-text .orange {
   color: var(--salmon-600);
