@@ -4612,6 +4612,9 @@ body.drawer-open {
   to { transform: rotate(360deg); }
 }
 
+/* reason__bodyのbentoグリッド調整 */
+.reason__bento { margin-bottom: 0; }
+
 /* ========== Mech Detail ========== */
 .mech-detail {
   position: relative;
