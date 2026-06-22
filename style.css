@@ -3589,6 +3589,12 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== Voice: Masonry (高さ不揃い) ========== */
+/* ========== 非表示セクション ========== */
+.compare,
+.statement,
+.pickup,
+.stats { display: none; }
+
 @keyframes voice-scroll {
   0%   { transform: translateX(-50%); }
   100% { transform: translateX(0); }
