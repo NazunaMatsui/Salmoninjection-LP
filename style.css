@@ -65,7 +65,7 @@ em { font-style: italic; font-weight: 400; }
 .section-inner {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 160px 24px;
+  padding: 160px 24px 0;
   position: relative;
   z-index: 2;
 }
@@ -88,6 +88,8 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 64px;
 }
 .section__title span { display: block; }
+.voice__title-inline,
+.voice__title-inline span { display: inline !important; }
 .empathy__sub {
   text-align: center;
   font-size: 13px;
@@ -110,6 +112,7 @@ em { font-style: italic; font-weight: 400; }
   background-clip: text;
   color: transparent;
   font-weight: 400;
+  font-size: 1.25em;
 }
 .accent-line {
   background: linear-gradient(transparent 65%, rgba(255, 180, 165, 0.45) 65%);
@@ -879,6 +882,21 @@ em { font-style: italic; font-weight: 400; }
 /* ========== Reason ========== */
 .reason {
   background: linear-gradient(180deg, #fff 0%, #fff9f8 100%);
+  position: relative;
+  overflow: hidden;
+}
+.reason::before {
+  content: 'REASON';
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(140px, 18vw, 260px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* ブロック共通 */
@@ -1742,7 +1760,7 @@ em { font-style: italic; font-weight: 400; }
 .cta-mid {
   position: relative;
   text-align: center;
-  padding: 140px 24px;
+  padding: 140px 24px 0;
   overflow: hidden;
 }
 .cta-mid__lead {
@@ -1785,6 +1803,14 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== Howto lead ========== */
+.howto__title-grad {
+  display: inline !important;
+  background: linear-gradient(135deg, var(--salmon-600), var(--gold)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
 .howto__lead {
   text-align: center;
   font-size: 14px;
@@ -1798,6 +1824,21 @@ em { font-style: italic; font-weight: 400; }
 .caution {
   padding: 0;
   background: linear-gradient(180deg, rgba(255,248,245,0.6) 0%, rgba(255,255,255,0.4) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.caution::before {
+  content: 'CAUTION';
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(140px, 18vw, 260px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 .caution__list {
   list-style: none;
@@ -1836,6 +1877,26 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== Benefit ========== */
+.benefit .section-inner {
+  padding-bottom: 0;
+}
+.benefit {
+  position: relative;
+  overflow: hidden;
+}
+.benefit::before {
+  content: 'BEAUTY';
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(140px, 18vw, 260px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
 .benefit__lead {
   text-align: center;
   font-family: var(--serif);
@@ -1951,6 +2012,19 @@ em { font-style: italic; font-weight: 400; }
   background: linear-gradient(180deg, rgba(255, 245, 243, 0.5), transparent);
   position: relative;
   overflow: hidden;
+}
+.mechanism::before {
+  content: 'STEPS';
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(140px, 18vw, 260px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 .mechanism__lead {
   text-align: center;
@@ -2152,7 +2226,6 @@ em { font-style: italic; font-weight: 400; }
 
 /* ========== Voice ========== */
 .voice {
-  background: linear-gradient(180deg, transparent, rgba(255, 240, 235, 0.5));
   position: relative;
   overflow: hidden;
 }
@@ -2251,6 +2324,23 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== How To ========== */
+.howto {
+  position: relative;
+  overflow: hidden;
+}
+.howto::before {
+  content: 'HOW TO';
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(140px, 18vw, 260px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
 .howto__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2383,6 +2473,23 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== FAQ ========== */
+.faq {
+  position: relative;
+  overflow: hidden;
+}
+.faq::before {
+  content: 'FAQ';
+  position: absolute;
+  top: 60px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(140px, 18vw, 260px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
 .faq__list { max-width: 880px; margin: 0 auto; }
 .faq__item {
   margin-bottom: 16px;
@@ -2493,7 +2600,7 @@ em { font-style: italic; font-weight: 400; }
 .cta-final {
   position: relative;
   text-align: center;
-  padding: 160px 24px 200px;
+  padding: 160px 24px 0;
   overflow: hidden;
 }
 .cta-final__bg-text {
@@ -3449,7 +3556,7 @@ em { font-style: italic; font-weight: 400; }
 /* ========== Mechanism: 縦タイムライン ========== */
 .mechanism__timeline {
   max-width: 100%;
-  margin: 0 auto 16px;
+  margin: 0 auto;
   position: relative;
 }
 .mechanism__t-item {
@@ -3668,8 +3775,8 @@ em { font-style: italic; font-weight: 400; }
 .voice__ticker {
   overflow: hidden;
   margin: 0 -20px 24px;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 .voice__track {
   display: flex;
@@ -3687,7 +3794,7 @@ em { font-style: italic; font-weight: 400; }
 }
 
 .voice__item--tall {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 240, 235, 0.75)) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
 }
 .voice__profile-wrap {
   display: flex;
