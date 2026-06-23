@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Marcellus&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho&family=Caveat&family=Yomogi&family=Klee+One&family=Yusei+Magic&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 </head>
 <body>
 
@@ -26,8 +27,7 @@
 <header class="header">
   <div class="header__inner">
     <a href="#top" class="header__logo">
-      <span class="logo-text">SC SALMON</span>
-      <span class="logo-text-sub">INJECTION</span>
+      <img src="images/rogo.PNG" alt="SC SALMON INJECTION" class="header__logo-img">
     </a>
     <nav class="header__nav">
       <a href="#concept"><span class="nav-num">01</span>Concept</a>
@@ -266,12 +266,6 @@
     </ul>
 
     <div class="empathy__bridge-wrap reveal-up">
-      <div class="hand-arrow">
-        <svg viewBox="0 0 60 80" fill="none">
-          <path d="M30 5 Q35 30 28 55" stroke="#f87968" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
-          <path d="M22 50 L28 60 L36 53" stroke="#f87968" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
       <p class="empathy__bridge">
         その悩み、<span class="accent-bold">エステ級の技術</span>で<br>
         あなたを変える。
@@ -292,32 +286,39 @@
     <h2 class="section__title reveal-up">多くの方に選ばれ続ける<br><span class="reason-title-line"><span class="reason__title-num">3</span><span class="accent">つの理由</span></span></h2>
 
     <!-- ① -->
-    <div class="reason__block reveal-up">
+    <div class="reason__block reason__block--01 reveal-up">
       <h3 class="reason__heading">
         <span class="reason__num" aria-hidden="true">01</span>
         <span class="reason__heading-text">話題の成分を、<span class="orange">独自技術</span>で配合</span>
       </h3>
       <div class="reason__body">
-        <p class="reason__text">多くのスピキュール美容液は、スピキュールと美容成分を、ただ混ぜるだけ。<br>だから、成分が角質層まで届くかは不確実。届いても、一時的。<br>サーモンインジェクションは、<strong>違います。</strong></p>
+        <p class="reason__text">多くのスピキュール美容液は、スピキュールと美容成分を、ただ混ぜるだけ。<br>だから、成分が角質層まで届くかは不確実。届いても、一時的。<br><span class="reason__text-hero"><span style="white-space:nowrap">サーモンインジェクションは、</span><br>違います</span></p>
 
         <p class="reason__text">韓国の美容業界で注目される「<strong>PDRN（ポリデオキシリボヌクレオチド）</strong>」を、海綿由来の天然微細針「<strong>スピキュール</strong>」にコーティング。</p>
 
         <div class="reason__box">
           <p class="reason__box-title">独自の二重構造スピキュール</p>
-          <img src="images/hari.webp" alt="二重構造スピキュール図解" class="reason__box-img">
-          <div class="reason__box-rows">
-            <div class="reason__box-row">
-              <span class="reason__box-layer">外側</span>
-              <span class="reason__box-row-text"><strong>PDRN</strong>をコーティング → 角質層に<strong>即届く</strong></span>
+          <img src="images/hari.PNG" alt="二重構造スピキュール図解" class="reason__box-img">
+          <div class="reason__box-layers">
+            <div class="reason__layer-card reason__layer-card--outer">
+              <div class="reason__layer-label">外側</div>
+              <div class="reason__layer-body">
+                <p class="reason__layer-main"><strong>PDRN</strong>をコーティング</p>
+                <p class="reason__layer-sub">→ 角質層に<strong>即届く</strong></p>
+              </div>
             </div>
-            <div class="reason__box-row">
-              <span class="reason__box-layer reason__box-layer--inner">内部</span>
-              <span class="reason__box-row-text">厳選<strong>7種</strong>の美容成分を封入 → <strong>同時に浸透</strong></span>
+
+            <div class="reason__layer-card reason__layer-card--inner">
+              <div class="reason__layer-label">内部</div>
+              <div class="reason__layer-body">
+                <p class="reason__layer-main">厳選<strong>7種</strong>の美容成分を封入</p>
+                <p class="reason__layer-sub">→ <strong>同時に浸透</strong></p>
+              </div>
             </div>
           </div>
         </div>
 
-        <p class="reason__text"><span class="reason__text-large">溶けずに約72時間残る</span>から、外からも中からも届き続ける。</p>
+        <p class="reason__text reason__text--center"><span class="reason__text-large">溶けずに約72時間残る</span>から、<br>外からも中からも届き続ける。</p>
 
         <p class="reason__text reason__text--accent">この二重構造を実現したのは、<br><span class="reason__accent-brand">サーモンインジェクションだけ</span></p>
       </div>
@@ -433,16 +434,37 @@
         </div>
         <div class="reason__body-text">
           <div class="reason__body-item">
-            <p class="reason__body-kf">1本＝1回使い切り設計。</p>
-            <p class="reason__body-desc">継続使用の美容液は、開封のたびに空気や指先に触れ、少しずつ鮮度が落ちていきます。成分が最も輝く"開けたて"をあなたの肌へ。</p>
+            <div class="reason__body-card">
+              <div class="reason__body-card-icon">
+                <i class="ti ti-droplet" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="reason__body-kf">1本＝1回使い切り設計</p>
+                <p class="reason__body-desc">継続使用の美容液は、開封のたびに空気や指先に触れ、少しずつ鮮度が落ちていきます。成分が最も輝く"開けたて"をあなたの肌へ。</p>
+              </div>
+            </div>
           </div>
           <div class="reason__body-item">
-            <p class="reason__body-kf">旅行・出張にも。</p>
-            <p class="reason__body-desc">持ち運びやすく、特別なスキンケアタイムを手軽に叶えます。</p>
+            <div class="reason__body-card">
+              <div class="reason__body-card-icon">
+                <i class="ti ti-plane" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="reason__body-kf">旅行・出張にも</p>
+                <p class="reason__body-desc">持ち運びやすく、特別なスキンケアタイムを手軽に叶えます。</p>
+              </div>
+            </div>
           </div>
           <div class="reason__body-item">
-            <p class="reason__body-kf">毎日が、特別な時間に。</p>
-            <p class="reason__body-desc">華やかで上品なサーモンピンクのパッケージで、毎日のスキンケアが特別な時間に変わる。</p>
+            <div class="reason__body-card">
+              <div class="reason__body-card-icon">
+                <i class="ti ti-sparkles" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="reason__body-kf">毎日が、特別な時間に</p>
+                <p class="reason__body-desc">華やかで上品なサーモンピンクのパッケージで、毎日のスキンケアが特別な時間に変わる。</p>
+              </div>
+            </div>
           </div>
           <div class="reason__body-finale">
             <p class="reason__body-finale-sub">サロン級の品質を、<strong>¥1,980</strong>で。</p>
@@ -539,7 +561,7 @@
       プロが選ぶサロン級の品質が、<br>
       鏡を見るたび自信が持てる肌へ導く
     </p>
-    <p class="benefit__sub-title reveal-up">SC サーモン インジェクションが叶える<br>肌印象</p>
+    <p class="benefit__sub-title reveal-up">サーモンインジェクションが叶える<br>肌印象</p>
 
     <!-- 階段状レイアウト -->
     <ul class="benefit__list benefit__list--stairs">
@@ -746,10 +768,10 @@
   <div class="section-inner">
     <p class="section__small-title reveal-up">— How To Use —</p>
     <h2 class="section__title reveal-up">
-      <span class="howto__title-grad">効果を最大限に</span><br>
-      <span>正しい使い方で実感が変わる</span>
+      <span class="howto__title-grad">効果を最大限に</span>
+      <span class="howto__title-sub">正しい使い方で実感が変わる</span>
     </h2>
-    <p class="howto__lead reveal-up">週1回、たった2分。忙しいあなたでも続けられる、特別ケア。</p>
+    <p class="howto__lead reveal-up">週1回、たった2分。<br>忙しいあなたでも続けられる、特別ケア。</p>
 
     <ol class="howto__list">
       <li class="howto__item reveal-up" data-delay="100">
@@ -765,7 +787,7 @@
           </svg>
         </div>
         <h3 class="howto__title">洗顔後、<br>すぐに塗布</h3>
-        <p class="howto__text">洗顔後、化粧水で肌を整えた後、適量を手に取り、顔全体または気になる部分に塗布します。</p>
+        <p class="howto__text">洗顔後、化粧水で肌を整えた後、<strong class="accent-bold">適量を手に取り</strong>、顔全体または気になる部分に<strong class="accent-bold">塗布</strong>します。</p>
       </li>
       <li class="howto__item reveal-up" data-delay="200">
         <div class="howto__line"></div>
@@ -781,7 +803,7 @@
           </svg>
         </div>
         <h3 class="howto__title">指の腹で<br>押し込むようになじませる</h3>
-        <p class="howto__text">優しく指の腹で押し込むように、肌になじませます。スピキュールが角質層へ届き始めます。</p>
+        <p class="howto__text">優しく<strong class="accent-bold">指の腹で押し込むように</strong>、肌になじませます。スピキュールが<strong class="accent-bold">角質層へ届き</strong>始めます。</p>
       </li>
       <li class="howto__item reveal-up" data-delay="300">
         <div class="howto__num">STEP 03</div>
@@ -792,7 +814,7 @@
           </svg>
         </div>
         <h3 class="howto__title">クリームや<br>マスクで保湿</h3>
-        <p class="howto__text">スピキュールが角質層へ働きかけ、美容成分の浸透感をサポートします。その後、普段お使いのクリームやマスクで保湿してください。</p>
+        <p class="howto__text">スピキュールが<strong class="accent-bold">角質層へ働きかけ</strong>、美容成分の<strong class="accent-bold">浸透感をサポート</strong>します。その後、普段お使いのクリームやマスクで保湿してください。</p>
       </li>
     </ol>
     <p class="howto__note reveal-up">※1本1回分の使い切りタイプ。衛生的にもその日のうちに使い切ることをおすすめします。</p>
