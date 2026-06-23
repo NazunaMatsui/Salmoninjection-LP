@@ -1821,6 +1821,19 @@ em { font-style: italic; font-weight: 400; }
 }
 
 /* ========== 使用上の注意 ========== */
+.caution__title-inline,
+.caution__title-inline span {
+  display: inline !important;
+  color: var(--text-main) !important;
+  -webkit-text-fill-color: initial;
+}
+.caution__title-inline span.accent {
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
 .caution {
   padding: 0;
   background: linear-gradient(180deg, rgba(255,248,245,0.6) 0%, rgba(255,255,255,0.4) 100%);
@@ -1924,7 +1937,7 @@ em { font-style: italic; font-weight: 400; }
 .benefit__item {
   text-align: center;
   padding: 72px 32px 56px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 240, 235, 0.7));
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 6px;
