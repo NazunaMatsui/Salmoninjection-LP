@@ -486,6 +486,7 @@ em { font-style: italic; font-weight: 400; }
   color: transparent;
   font-weight: 400;
   font-style: italic;
+
 }
 .fv__sub {
   font-size: 15px;
@@ -2084,7 +2085,7 @@ em { font-style: italic; font-weight: 400; }
   user-select: none;
 }
 .benefit .section__title .accent {
-  filter: drop-shadow(0 2px 16px rgba(255,255,255,1)) drop-shadow(0 0 32px rgba(255,255,255,1)) drop-shadow(0 0 56px rgba(255,255,255,0.8)) drop-shadow(0 0 80px rgba(255,255,255,0.5));
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px rgba(255,255,255,0.7));
 }
 .benefit .benefit__sub-title {
   text-shadow: 0 0 4px rgba(255,255,255,1), 0 0 8px rgba(255,255,255,1), 0 2px 16px rgba(255,255,255,1), 0 0 32px rgba(255,255,255,1), 0 0 56px rgba(255,255,255,0.9), 0 0 80px rgba(255,255,255,0.7);
