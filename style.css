@@ -334,13 +334,15 @@ em { font-style: italic; font-weight: 400; }
 .fv__side--left { left: 32px; }
 .cta-mid__btn-area {
   position: absolute;
-  bottom: 10%;
-  right: 5%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  gap: 0;
+  width: calc(100% - 48px);
+  max-width: 480px;
 }
 .cta-mid__img-group {
   position: absolute;
@@ -2804,7 +2806,7 @@ em { font-style: italic; font-weight: 400; }
 .cta-final {
   position: relative;
   text-align: center;
-  padding: 160px 24px 0;
+  padding: 140px 24px 0;
   overflow: hidden;
   background-image: url('images/img1.webp');
   background-size: cover;
@@ -2889,6 +2891,21 @@ em { font-style: italic; font-weight: 400; }
   color: var(--text-light);
   margin-top: 20px;
   letter-spacing: 0.1em;
+}
+.cta-final__btn-area {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: calc(100% - 48px);
+  max-width: 480px;
+}
+.cta-final__btn-area .btn-line {
+  margin-top: 0;
 }
 
 /* ========== Sticky CTA ========== */

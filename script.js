@@ -2,6 +2,15 @@
    SC SALMON INJECTION - LP JavaScript v3
 ============================================ */
 
+history.scrollRestoration = 'manual';
+window.addEventListener('load', () => {
+  const saved = sessionStorage.getItem('scrollY');
+  if (saved) window.scrollTo(0, parseInt(saved));
+});
+window.addEventListener('scroll', () => {
+  sessionStorage.setItem('scrollY', window.scrollY);
+}, { passive: true });
+
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- Scroll Reveal Animation ---------- */
@@ -139,29 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Sticky CTA Show/Hide ---------- */
   const stickyCTA = document.getElementById('stickyCTA');
   const fv = document.querySelector('.fv');
+  const ctaMid = document.querySelector('.cta-mid');
+  const ctaFinal = document.querySelector('.cta-final');
   if (stickyCTA && fv) {
-    const stickyObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          stickyCTA.classList.add('is-visible');
-        } else {
-          stickyCTA.classList.remove('is-visible');
-        }
-      });
-    }, { threshold: 0 });
-    stickyObserver.observe(fv);
-    // also hide near footer
-    const finalCTA = document.querySelector('.cta-final');
-    if (finalCTA) {
-      const finalObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            stickyCTA.classList.remove('is-visible');
-          }
-        });
-      }, { threshold: 0.2 });
-      finalObserver.observe(finalCTA);
-    }
+    const updateStickyCTA = () => {
+      const inFV = fv.getBoundingClientRect().bottom > 0 && fv.getBoundingClientRect().top < window.innerHeight;
+      const inCtaMid = ctaMid && ctaMid.getBoundingClientRect().bottom > 0 && ctaMid.getBoundingClientRect().top < window.innerHeight;
+      const inCtaFinal = ctaFinal && ctaFinal.getBoundingClientRect().bottom > 0 && ctaFinal.getBoundingClientRect().top < window.innerHeight;
+      if (inFV || inCtaMid || inCtaFinal) {
+        stickyCTA.classList.remove('is-visible');
+      } else if (fv.getBoundingClientRect().bottom <= 0) {
+        stickyCTA.classList.add('is-visible');
+      }
+    };
+    window.addEventListener('scroll', updateStickyCTA, { passive: true });
+    updateStickyCTA();
   }
 
   /* ---------- Magnetic Buttons ---------- */

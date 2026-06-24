@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "lp-preview",
+      "name": "SC_Salmon_LP",
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8765"],
       "cwd": "/Users/nazunamatsui/Downloads/SC_Salmon_LP",
