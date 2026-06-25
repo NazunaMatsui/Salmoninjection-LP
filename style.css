@@ -2021,6 +2021,7 @@ em { font-style: italic; font-weight: 400; }
   background-position: center;
   background-repeat: no-repeat;
 }
+.cta-mid .aurora-bg { display: none; }
 .cta-mid__lead {
   font-family: var(--serif);
   font-size: 16px;
@@ -2159,10 +2160,15 @@ em { font-style: italic; font-weight: 400; }
 .benefit {
   position: relative;
   overflow: hidden;
-  background-image: url('images/aurora.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+.benefit::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('images/aurora.webp') center / cover no-repeat;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
 }
 .benefit::before {
   content: 'BEAUTY';
@@ -2204,27 +2210,26 @@ em { font-style: italic; font-weight: 400; }
 .benefit__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 24px;
   margin-bottom: 24px;
   overflow: visible;
 }
 .benefit__item {
   text-align: center;
-  padding: 48px 28px 40px;
+  padding: 22% 10% 22%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 240, 236, 0.6);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border-radius: 0 0 60px 0;
-  border: none;
-  border-right: 2px solid rgba(212, 132, 90, 0.5);
-  border-bottom: 2px solid rgba(212, 132, 90, 0.5);
+  border-radius: 50%;
+  border: 1.5px solid rgba(248, 121, 104, 0.3);
   box-shadow: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 .benefit__item::before {
   content: '';
@@ -2247,53 +2252,40 @@ em { font-style: italic; font-weight: 400; }
   width: 100%;
 }
 .benefit__num {
-  font-family: var(--display);
-  font-size: 18px;
-  letter-spacing: 0.4em;
-  color: var(--salmon-500);
-  margin-bottom: 24px;
+  display: none;
 }
 .benefit__icon-wrap {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 32px;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255, 220, 215, 0.5), rgba(255, 240, 235, 0.5));
+  background: none;
   position: relative;
 }
-.benefit__icon-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -10px;
-  border-radius: 50%;
-  border: 1px solid rgba(248, 121, 104, 0.25);
-}
+.benefit__icon-wrap::before { display: none; }
 .benefit__icon-svg {
-  width: 50px;
-  height: 50px;
-  filter: drop-shadow(0 6px 12px rgba(248, 121, 104, 0.3));
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 2px 6px rgba(248, 121, 104, 0.4));
 }
 .benefit__title {
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: clamp(22px, 8vw, 44px);
   font-weight: 400;
-  margin-bottom: 28px;
-  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
   line-height: 1.5;
-  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-500), var(--gold));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--salmon-600);
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 20px rgba(255,255,255,0.9);
 }
 .benefit__text {
-  font-size: 13px;
-  line-height: 2.2;
+  font-size: clamp(12px, 3.2vw, 15px);
+  line-height: 2;
   color: var(--text-sub);
   font-weight: 300;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 .benefit__notes {
   text-align: center;
@@ -2303,7 +2295,7 @@ em { font-style: italic; font-weight: 400; }
   letter-spacing: 0.1em;
 }
 @media (max-width: 900px) {
-  .benefit__list { grid-template-columns: 1fr; gap: 24px; }
+  .benefit__list { grid-template-columns: repeat(3, 1fr); gap: 12px; }
 }
 
 /* ========== Mechanism ========== */
@@ -3331,7 +3323,7 @@ em { font-style: italic; font-weight: 400; }
   bottom: 110%;
   left: 80%;
   transform: translateX(-50%) rotate(8deg);
-  filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 6px #fff) drop-shadow(0 0 10px rgba(255,255,255,0.8));
+  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 8px #fff) drop-shadow(0 0 14px #fff) drop-shadow(0 0 20px rgba(255,255,255,0.9));
   margin-bottom: 8px;
 }
 .fv__circle-frame {
@@ -3898,8 +3890,8 @@ em { font-style: italic; font-weight: 400; }
   align-items: start;
 }
 .benefit__item--1 { margin-top: 0; }
-.benefit__item--2 { margin-top: 60px; }
-.benefit__item--3 { margin-top: 120px; }
+.benefit__item--2 { margin-top: 0; }
+.benefit__item--3 { margin-top: 0; }
 .benefit__decoration {
   display: block;
   margin-top: 24px;
