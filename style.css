@@ -2413,6 +2413,13 @@ em { font-style: italic; font-weight: 400; }
   letter-spacing: 0.05em;
   line-height: 1.4;
 }
+.ingredient__img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  margin: 8px auto;
+}
 .ingredient__text {
   font-size: 12px;
   line-height: 1.9;
