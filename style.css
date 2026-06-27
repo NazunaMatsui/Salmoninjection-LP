@@ -717,7 +717,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .fv__cta-area {
   position: relative;
-  margin-top: -80px;
+  margin-top: -44px;
 }
 .fv__cta {
   position: relative;
@@ -3236,6 +3236,64 @@ em { font-style: italic; font-weight: 400; }
   width: 100%;
   margin: 0 auto;
 }
+.fv__left-group {
+  position: absolute;
+  top: 16px;
+  left: 38%;
+  transform: translateX(-50%);
+  width: min(65%, 240px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 3;
+  pointer-events: none;
+}
+.fv__left-group .fv__col-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 5px rgba(255,255,255,0.95));
+}
+.fv__left-group .deco-line:first-of-type {
+  margin-top: 8px;
+}
+.deco-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  margin: -8px 0;
+}
+.deco-line__bar {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #f87968, transparent);
+}
+.deco-line__spark {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 3px rgba(248,121,104,0.6));
+}
+.fv__product-group {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+.fv__sub-imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+.fv__sub-img {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
 .fv__copy {
   text-align: left;
   position: relative;
@@ -3321,10 +3379,10 @@ em { font-style: italic; font-weight: 400; }
   object-fit: contain;
   position: absolute;
   bottom: 110%;
-  left: 80%;
+  left: 90%;
   transform: translateX(-50%) rotate(8deg);
-  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 8px #fff) drop-shadow(0 0 14px #fff) drop-shadow(0 0 20px rgba(255,255,255,0.9));
   margin-bottom: 8px;
+  filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 8px #fff) drop-shadow(0 0 14px #fff) drop-shadow(0 0 20px rgba(255,255,255,0.9));
 }
 .fv__circle-frame {
   position: absolute;
