@@ -5923,6 +5923,10 @@ body.drawer-open {
   .empathy__sub { font-size: 17px; }
   .empathy__acc-text { font-size: 17px; }
   .empathy__acc-text br { display: none; }
+  .faq__q-text { font-size: 18px; }
+  .faq__q-mark { font-size: 18px; }
+  .faq__a p { font-size: 17px; }
+  .faq__a-mark { font-size: 18px; }
   .reason__body-finale-sub { font-size: clamp(20px, 2vw, 26px); }
   .reason__body-tagline { font-size: clamp(28px, 3vw, 38px); }
   .reason__box-img { width: 44%; }
