@@ -5806,4 +5806,112 @@ body.drawer-open {
   .benefit__decoration {
     margin-top: 8px;
   }
+
+}
+
+/* ============================================================
+   Reason セクション PC/タブレット redesign (min-width: 768px)
+   エディトリアル スタイル — SP (max-width: 767px) は一切触らない
+   ============================================================ */
+@media (min-width: 768px) {
+
+  /* セクション */
+  .reason {
+    background: #fff;
+  }
+  .reason::before { display: none; }
+
+  /* ブロック: カードなし・仕切り線のみ */
+  .reason__block {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+    border-top: 1px solid rgba(232,90,74,0.18);
+    padding: 56px 0;
+  }
+  .reason__block:last-child {
+    border-bottom: 1px solid rgba(232,90,74,0.18);
+    margin-bottom: 0;
+  }
+
+  /* 見出し側 */
+  .reason__heading {
+    background: transparent;
+    border-bottom: none;
+    border-right: none;
+    padding: 0 48px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: visible;
+    position: relative;
+  }
+  .reason__num {
+    position: static;
+    font-size: clamp(80px, 9vw, 130px);
+    line-height: 0.85;
+    color: var(--salmon-100);
+    margin-bottom: 16px;
+    left: auto; top: auto;
+    letter-spacing: -4px;
+    font-family: var(--display);
+  }
+  .reason__heading-text {
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.75;
+    text-align: left;
+    color: var(--text-main);
+    letter-spacing: 0.07em;
+  }
+  .reason__heading-text .orange {
+    color: var(--salmon-600);
+    font-weight: 700;
+  }
+
+  /* 本文側 */
+  .reason__body {
+    background: transparent;
+    border-left: 1px solid rgba(232,90,74,0.18);
+    padding: 0 0 0 48px;
+  }
+
+  /* 02ブロックのみ反転 */
+  .reason__block:nth-child(3) {
+    grid-template-columns: 1fr 320px;
+  }
+  .reason__block:nth-child(3) .reason__heading {
+    order: 2;
+    padding: 0 0 0 48px;
+    border-right: none;
+    border-left: 1px solid rgba(232,90,74,0.18);
+  }
+  .reason__block:nth-child(3) .reason__body {
+    order: 1;
+    border-left: none;
+    padding: 0 48px 0 0;
+  }
+
+  /* 成分ベントー 4列 */
+  .ingredients__bento {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .ingredient--hero { grid-column: span 2; grid-row: span 2; }
+  .ingredient--wide { grid-column: span 2; }
+
+  /* テキスト・コンテンツ */
+  .reason__text { font-size: 13px; line-height: 1.95; }
+  .reason__text-hero { font-size: clamp(17px, 2vw, 24px); }
+  .reason__box { margin-top: 20px; }
+  .reason__box-layers { flex-direction: row; gap: 12px; }
+  .reason__layer-card { flex: 1; }
+  .reason__compare-th,
+  .reason__compare-td { font-size: 12px; padding: 10px 8px; }
+  .reason__compare-td--label { font-size: 12px; }
 }
