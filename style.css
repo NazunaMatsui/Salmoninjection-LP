@@ -69,6 +69,7 @@ em { font-style: italic; font-weight: 400; }
   position: relative;
   z-index: 2;
 }
+.pc-block { display: inline; }
 .section__small-title {
   font-family: var(--display-alt);
   font-size: 13px;
@@ -5771,6 +5772,7 @@ body.drawer-open {
   .benefit__item--3 {
     margin-top: 0;
   }
+  .benefit .section-inner { max-width: 1500px; }
   .benefit__item {
     padding: 12% 9% !important;
     aspect-ratio: 1 / 1 !important;
@@ -5785,26 +5787,26 @@ body.drawer-open {
     height: 100%;
   }
   .benefit__icon-wrap {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 10px;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
     flex-shrink: 0;
   }
   .benefit__icon-svg {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
   .benefit__title {
-    font-size: 34px;
-    margin-bottom: 10px;
+    font-size: clamp(34px, 3.6vw, 48px);
+    margin-bottom: 12px;
     flex-shrink: 0;
   }
   .benefit__text {
-    font-size: 12px;
-    line-height: 1.8;
+    font-size: clamp(13px, 1.2vw, 16px);
+    line-height: 1.9;
   }
   .benefit__decoration {
-    margin-top: 8px;
+    margin-top: 10px;
   }
 
 }
@@ -5862,10 +5864,11 @@ body.drawer-open {
     letter-spacing: -4px;
     font-family: var(--display);
   }
+  .pc-block { display: block; }
   .reason__heading-text {
-    font-size: clamp(15px, 1.4vw, 18px);
-    line-height: 1.75;
-    text-align: left;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.7;
+    text-align: center;
     color: var(--text-main);
     letter-spacing: 0.07em;
   }
@@ -5906,12 +5909,31 @@ body.drawer-open {
   .ingredient--wide { grid-column: span 2; }
 
   /* テキスト・コンテンツ */
-  .reason__text { font-size: 13px; line-height: 1.95; }
-  .reason__text-hero { font-size: clamp(17px, 2vw, 24px); }
+  .reason__text { font-size: 15px; line-height: 2; }
+  .reason__text-hero { font-size: clamp(24px, 3vw, 38px); text-align: left; white-space: nowrap; }
+  .reason__text--center { font-size: 15px; line-height: 2; }
+  .reason__text-large { font-size: clamp(22px, 2.2vw, 28px); display: block; margin-bottom: 4px; }
+  .reason__text--accent { font-size: clamp(15px, 1.4vw, 17px); }
+  .reason__accent-brand { font-size: clamp(26px, 2.8vw, 36px); display: block; margin-top: 6px; }
+  .reason__body-kf { font-size: 18px; }
+  .reason__body-desc { font-size: 15px; }
+  .mechanism__step { font-size: 15px; }
+  .mechanism__title { font-size: 34px; }
+  .mechanism__text { font-size: 15px; }
+  .empathy__sub { font-size: 17px; }
+  .empathy__acc-text { font-size: 17px; }
+  .empathy__acc-text br { display: none; }
+  .reason__body-finale-sub { font-size: clamp(20px, 2vw, 26px); }
+  .reason__body-tagline { font-size: clamp(28px, 3vw, 38px); }
+  .reason__box-img { width: 44%; }
+  .reason__box-title { font-size: 15px; }
+  .reason__layer-label { font-size: 14px; padding: 8px 14px; }
+  .reason__layer-main { font-size: 16px; }
+  .reason__layer-sub { font-size: 15px; }
   .reason__box { margin-top: 20px; }
   .reason__box-layers { flex-direction: row; gap: 12px; }
   .reason__layer-card { flex: 1; }
   .reason__compare-th,
-  .reason__compare-td { font-size: 12px; padding: 10px 8px; }
-  .reason__compare-td--label { font-size: 12px; }
+  .reason__compare-td { font-size: 14px; padding: 10px 8px; }
+  .reason__compare-td--label { font-size: 14px; }
 }
