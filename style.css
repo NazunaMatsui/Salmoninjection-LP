@@ -297,7 +297,7 @@ em { font-style: italic; font-weight: 400; }
   align-items: center;
   justify-content: center;
   padding: 40px 24px 0;
-  overflow: hidden;
+  overflow: clip;
   background: url('images/back-FV.webp') 60% top / 130% no-repeat;
 }
 .fv .aurora-bg { display: none; }
@@ -709,6 +709,9 @@ em { font-style: italic; font-weight: 400; }
   color: var(--text-sub);
   letter-spacing: 0.1em;
 }
+/* PC専用固定CTA：SPでは非表示 */
+.fv__cta--pc-fixed { display: none !important; }
+
 .fv__cta-note {
   font-size: 11px;
   color: var(--text-light);
@@ -2451,7 +2454,7 @@ em { font-style: italic; font-weight: 400; }
 .benefit__text {
   font-size: clamp(12px, 3.2vw, 15px);
   line-height: 2;
-  color: var(--text-sub);
+  color: #2a1a20;
   font-weight: 300;
   letter-spacing: 0.05em;
 }
@@ -5424,7 +5427,7 @@ body.drawer-open {
     grid-column: span 2;
   }
 
-  /* Benefit階段 → スマホでフラット */
+  /* Benefit階段 → スマホでフラット(1列) */
   .benefit__list--stairs {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -5433,9 +5436,6 @@ body.drawer-open {
   .benefit__item--2,
   .benefit__item--3 {
     margin-top: 0;
-  }
-  .benefit__item {
-    padding: 48px 24px 36px;
   }
 
   /* Mechanism Timeline */
@@ -5649,6 +5649,13 @@ body.drawer-open {
 ======================================== */
 @media (min-width: 768px) {
   .sticky-cta { display: none !important; }
+  .cta-mid { background-image: url('images/img-PC.webp'); background-position: center top; }
+  .cta-final { background-image: url('images/img-PC.webp'); background-position: center top; }
+  .cta-mid__btn-area { display: none; }
+  .cta-final__btn-area { display: none; }
+  .cta-mid__deco-img { left: 12%; top: 8%; }
+  .cta-mid__deco-img2 { left: 12%; margin-left: 5%; top: 45%; width: clamp(160px, 30vw, 360px); }
+  .cta-mid__deco-img3 { left: 14%; margin-left: -10%; top: 59%; width: clamp(300px, 62vw, 700px); }
 }
 
 @media (min-width: 1025px) {
@@ -5661,8 +5668,11 @@ body.drawer-open {
   .fv__layout { position: static; }
   .fv__copy { position: static; }
   .fv__cta-area { position: static; margin-top: 0; }
-  .fv__cta { position: fixed !important; bottom: 8px; right: 2%; z-index: 99999 !important; }
-  .fv__left-group { width: min(90%, 480px); left: 28%; }
+  /* SP用CTAをPC上で非表示 */
+  .fv__cta:not(.fv__cta--pc-fixed) { display: none !important; }
+  /* PC専用固定CTA */
+  .fv__cta--pc-fixed { display: block !important; position: fixed; bottom: 8px; right: 2%; z-index: 99999; }
+  .fv__left-group { width: min(90%, 480px); left: 28%; top: 60px; }
   .fv__product-img { width: 40%; max-width: 300px; top: 45%; }
   .influencer::before { background: url('images/back-PC.webp') center top / cover no-repeat; }
   .influencer { min-height: 66.7vw; }
@@ -5711,5 +5721,89 @@ body.drawer-open {
   .btn-back-to-top:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 0 4px rgba(255,255,255,0.95), 0 0 40px 14px rgba(255,255,255,0.8), 0 4px 14px rgba(0,0,0,0.1);
+  }
+
+  /* Mechanism: 横3列 */
+  .mechanism__timeline {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: stretch;
+  }
+  .mechanism__t-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 0;
+    gap: 16px;
+  }
+  .mechanism__t-line { display: none; }
+  .mechanism__t-content::before { display: none; }
+  .mechanism__t-content {
+    flex: 1;
+    width: 100%;
+    padding: 24px 20px;
+    text-align: left;
+  }
+  .mechanism__t-img {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* FAQ Q4 改行抑制 */
+  .faq__item:nth-child(4) .faq__a br { display: none; }
+
+  /* Caution */
+  .caution__list { max-width: 900px; }
+  .caution__list li { font-size: 15px; }
+
+  /* Benefit: 横3列・上揃え */
+  .benefit__list--stairs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+  .benefit__item--1,
+  .benefit__item--2,
+  .benefit__item--3 {
+    margin-top: 0;
+  }
+  .benefit__item {
+    padding: 12% 9% !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+  }
+  .benefit__inner {
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    height: 100%;
+  }
+  .benefit__icon-wrap {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+  .benefit__icon-svg {
+    width: 22px;
+    height: 22px;
+  }
+  .benefit__title {
+    font-size: 34px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+  .benefit__text {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .benefit__decoration {
+    margin-top: 8px;
   }
 }

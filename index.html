@@ -140,7 +140,7 @@
             </svg>
           </div>
         </div>
-        <div class="fv__cta reveal" data-delay="1100">
+        <div class="fv__cta">
           <img src="images/SALMONINJECTION.PNG" alt="SC SALMON INJECTION" class="fv__product-img--sp">
           <div class="fv__cta-wrap">
             <a href="#cta" class="btn-primary btn-primary--full btn-shimmer magnetic-btn">
@@ -1394,5 +1394,23 @@
   targets.forEach(function(el){ observer.observe(el); });
 })();
 </script>
+
+<!-- PC専用固定CTA（SP非表示） -->
+<div class="fv__cta fv__cta--pc-fixed">
+  <div class="fv__cta-wrap">
+    <a href="#cta" class="btn-primary btn-primary--full btn-shimmer magnetic-btn">
+      <span class="btn-label">今すぐ試してみる</span>
+      <span class="btn-arrow">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <a href="#" class="btn-back-to-top" aria-label="TOPへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>TOP</span>
+    </a>
+  </div>
+  <p class="fv__cta-note">※Instagram #pdrn 投稿数61.3万件(2026年6月時点)</p>
+</div>
+
 </body>
 </html>
