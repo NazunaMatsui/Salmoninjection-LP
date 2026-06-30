@@ -4755,6 +4755,9 @@ em { font-style: italic; font-weight: 400; }
 @media (max-width: 600px) {
   /* スマホ: チップを下に縦並びに */
   .fv__circle-frame { width: 280px; height: 280px; }
+  /* サークルはその場でフェードインのみ（位置は動かさない） */
+  .fv__cta-area > .fv__circle-frame.reveal { transform: translateY(-60%); }
+  .fv__cta-area > .fv__circle-frame.reveal.is-visible { transform: translateY(-60%); }
   .fv__visual { height: auto; }
   .fv__product { width: 200px; height: 280px; }
   .fv__chip {
