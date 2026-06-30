@@ -5659,7 +5659,7 @@ body.drawer-open {
   .cta-mid__deco-img3 { left: 14%; margin-left: -10%; top: 59%; width: clamp(300px, 62vw, 700px); }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
   .btn-line { display: none; }
   .fv__product-img--sp { display: none; }
   .fv__product-img:not(.fv__product-img--sp) { display: block; }
@@ -5941,3 +5941,50 @@ body.drawer-open {
   .reason__compare-td { font-size: 14px; padding: 10px 8px; }
   .reason__compare-td--label { font-size: 14px; }
 }
+
+/* ============================================================
+   タブレット調整 (min-width: 768px) and (max-width: 1024px)
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* FV: SALMONINJECTION.PNG を少し大きく */
+  .fv__product-img { width: 48%; max-width: 360px; }
+
+  /* FV: 画像を少し小さく（ラインも追従） */
+  .fv__left-group { width: min(85%, 450px); left: 28%; top: 60px; }
+  .fv__col-img--pc-only { width: 130% !important; max-width: none !important; position: relative; top: -30px; left: 30px; }
+  .fv__left-group .fv__col-img:nth-of-type(4),
+  .fv__left-group .fv__col-img:nth-of-type(5) { position: relative; top: -60px; }
+  .fv__left-group .deco-line { position: relative; top: -60px; }
+
+  /* 各セクション上部余白を統一（FV・インフルエンサー除く） */
+  .section-inner { padding-top: 60px; }
+  .fv .section-inner { padding-top: 140px; }
+  .influencer .section-inner { padding-top: 140px; }
+
+  /* はみ出し防止 */
+  .reason__text-hero { font-size: clamp(16px, 2.2vw, 22px); white-space: nowrap; }
+
+  /* Benefit: タブレット3列・余白を最小化して円を大きく */
+  .benefit .section-inner { max-width: 100%; padding-left: 4px; padding-right: 4px; }
+  .benefit__list--stairs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .benefit__item--1,
+  .benefit__item--2,
+  .benefit__item--3 {
+    margin-top: 0;
+  }
+  .benefit__item {
+    padding: 10% 7% !important;
+  }
+  .benefit__title {
+    font-size: clamp(22px, 3.8vw, 34px);
+    margin-bottom: 8px;
+  }
+  .benefit__text {
+    font-size: clamp(10px, 1.4vw, 13px);
+    line-height: 1.75;
+  }
+}
+
