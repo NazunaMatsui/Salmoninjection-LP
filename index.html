@@ -1394,6 +1394,24 @@
   targets.forEach(function(el){ observer.observe(el); });
 })();
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var fixedCta = document.querySelector('.fv__cta--pc-fixed');
+  if (!fixedCta) return;
+  var ctaSections = document.querySelectorAll('.cta-mid, .cta-final');
+  function check(){
+    var hide = false;
+    ctaSections.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) hide = true;
+    });
+    fixedCta.style.visibility = hide ? 'hidden' : '';
+    fixedCta.style.opacity = hide ? '0' : '';
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  check();
+});
+</script>
 
 <!-- PC専用固定CTA（SP非表示） -->
 <div class="fv__cta fv__cta--pc-fixed">

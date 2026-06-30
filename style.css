@@ -5661,8 +5661,22 @@ body.drawer-open {
   .sticky-cta { display: none !important; }
   .cta-mid { background-image: url('images/img-PC.webp'); background-position: center top; }
   .cta-final { background-image: url('images/img-PC.webp'); background-position: center top; }
-  .cta-mid__btn-area { display: none; }
-  .cta-final__btn-area { display: none; }
+  .cta-mid__btn-area,
+  .cta-final__btn-area {
+    display: flex !important;
+    position: absolute;
+    bottom: 14%;
+    left: auto;
+    right: 6%;
+    transform: none;
+    width: 560px;
+    max-width: 52%;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+  }
+  .cta-mid__btn-area .btn-line,
+  .cta-final__btn-area .btn-line { display: none; }
   .cta-mid__deco-img { left: 12%; top: 8%; }
   .cta-mid__deco-img2 { left: 12%; margin-left: 5%; top: 45%; width: clamp(160px, 30vw, 360px); }
   .cta-mid__deco-img3 { left: 14%; margin-left: -10%; top: 59%; width: clamp(300px, 62vw, 700px); }
@@ -5994,6 +6008,17 @@ body.drawer-open {
   .benefit__text {
     font-size: clamp(10px, 1.4vw, 13px);
     line-height: 1.75;
+  }
+
+}
+
+/* PC専用 CTA ボタンサイズ */
+@media (min-width: 1025px) {
+  .cta-mid__btn-area .btn-primary,
+  .cta-final__btn-area .btn-primary {
+    width: 100%;
+    padding: 30px 48px;
+    font-size: 17px;
   }
 }
 
