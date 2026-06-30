@@ -3347,6 +3347,14 @@ em { font-style: italic; font-weight: 400; }
   opacity: 1;
   transform: translateY(0);
 }
+/* FV: 上からふわっと順番に */
+.fv .reveal {
+  transform: translateY(-28px);
+}
+.fv .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ========== Mobile ========== */
 @media (max-width: 768px) {
@@ -3472,6 +3480,7 @@ em { font-style: italic; font-weight: 400; }
 .fv__left-group .fv__col-img:nth-of-type(2) { animation-delay: 1.2s; }
 .fv__left-group .fv__col-img:nth-of-type(3) { animation-delay: 1.5s; }
 .fv__left-group .fv__col-img:nth-of-type(4) { animation-delay: 1.8s; }
+.fv__left-group .fv__col-img:nth-of-type(5) { animation-delay: 2.1s; }
 .fv__left-group .deco-line:first-of-type {
   margin-top: 8px;
 }
