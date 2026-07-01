@@ -6023,5 +6023,6 @@ body.drawer-open {
     padding: 30px 48px;
     font-size: 17px;
   }
+  .benefit .section-inner { max-width: 1800px !important; }
 }
 
