@@ -6024,5 +6024,6 @@ body.drawer-open {
     font-size: 17px;
   }
   .benefit .section-inner { max-width: 1800px !important; }
+  .header__nav { display: none; }
 }
 
