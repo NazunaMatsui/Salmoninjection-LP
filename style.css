@@ -1628,6 +1628,13 @@ em { font-style: italic; font-weight: 400; }
 .reason__compare-td--ours small {
   color: #c0a09c;
 }
+.reason__compare-note {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+  line-height: 1.7;
+}
 .cmp-maru {
   display: inline-block;
   color: var(--salmon-600);
