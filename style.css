@@ -2188,7 +2188,7 @@ em { font-style: italic; font-weight: 400; }
   text-align: center;
   padding: 140px 24px 0;
   overflow: hidden;
-  background-image: url('images/bg-img-01.webp');
+  background-image: url('images/bg-img-01-model.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3073,7 +3073,7 @@ em { font-style: italic; font-weight: 400; }
   text-align: center;
   padding: 140px 24px 0;
   overflow: hidden;
-  background-image: url('images/bg-img-01.webp');
+  background-image: url('images/bg-img-01-model.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5662,8 +5662,8 @@ body.drawer-open {
 ======================================== */
 @media (min-width: 768px) {
   .sticky-cta { display: none !important; }
-  .cta-mid { background-image: url('images/bg-img-pc.webp'); background-position: center top; }
-  .cta-final { background-image: url('images/bg-img-pc.webp'); background-position: center top; }
+  .cta-mid { background-image: url('images/bg-img-pc-model.webp'); background-position: center top; }
+  .cta-final { background-image: url('images/bg-img-pc-model.webp'); background-position: center top; }
   .cta-mid__btn-area,
   .cta-final__btn-area {
     display: flex !important;
