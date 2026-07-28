@@ -3,7 +3,7 @@
    Beauty Editorial / Salmon Pink Aurora
 ======================================== */
 
-/* ========== Reset & Base ========== */
+/* リセット・ベーススタイル */
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -24,7 +24,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; color: 
 sup { font-size: 0.5em; vertical-align: super; }
 em { font-style: italic; font-weight: 400; }
 
-/* ========== Variables ========== */
+/* CSS変数（カラー・フォントなど） */
 :root {
   --salmon-50: #fff5f3;
   --salmon-100: #ffe5e0;
@@ -50,7 +50,7 @@ em { font-style: italic; font-weight: 400; }
   --sans: 'Noto Sans JP', sans-serif;
 }
 
-/* ========== Noise Overlay ========== */
+/* 背景のノイズオーバーレイ */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -61,7 +61,7 @@ em { font-style: italic; font-weight: 400; }
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
 }
 
-/* ========== Section Helpers ========== */
+/* セクション共通ヘルパー */
 .section-inner {
   max-width: 1180px;
   margin: 0 auto;
@@ -132,7 +132,7 @@ em { font-style: italic; font-weight: 400; }
   .section-inner { padding: 60px 20px; }
 }
 
-/* ========== Aurora ========== */
+/* オーロラ背景アニメーション */
 .aurora-bg {
   position: absolute;
   inset: 0;
@@ -182,7 +182,7 @@ em { font-style: italic; font-weight: 400; }
   66% { transform: translate(-30px, 40px) scale(0.95); }
 }
 
-/* ========== Header ========== */
+/* ヘッダー */
 .header {
   position: relative;
   z-index: 100;
@@ -331,7 +331,7 @@ em { font-style: italic; font-weight: 400; }
   50% { transform: translate(-50%, -50%) scale(1.05); }
 }
 
-/* 縦書きサイドキャッチ */
+/* FV縦書きサイドコピー */
 .fv__side {
   position: absolute;
   top: 50%;
@@ -408,7 +408,7 @@ em { font-style: italic; font-weight: 400; }
   .fv__side { display: none; }
 }
 
-/* パーティクル */
+/* パーティクルアニメーション */
 .fv__particles {
   position: absolute;
   inset: 0;
@@ -531,7 +531,7 @@ em { font-style: italic; font-weight: 400; }
   line-height: 1.2;
 }
 
-/* Product Mockup */
+/* 商品モックアップ */
 .fv__product {
   margin: 56px auto 40px;
   width: 240px;
@@ -710,7 +710,7 @@ em { font-style: italic; font-weight: 400; }
   color: var(--text-sub);
   letter-spacing: 0.1em;
 }
-/* PC専用固定CTA：SPでは非表示 */
+/* PC用固定CTA（スマホは非表示） */
 .fv__cta--pc-fixed { display: none !important; }
 
 .fv__cta-note {
@@ -731,7 +731,7 @@ em { font-style: italic; font-weight: 400; }
   position: relative;
 }
 
-/* Full-width CTA */
+/* 全幅CTAボタン */
 .btn-primary--full {
   width: 100%;
   display: flex;
@@ -752,7 +752,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .fv__product-img:not(.fv__product-img--sp) { display: none; }
 
-/* Shimmer animation */
+/* ボタンのシマーアニメーション */
 @keyframes shimmer {
   0%   { left: -100%; }
   60%  { left: 150%; }
@@ -769,7 +769,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .btn-shimmer:hover::before { animation-play-state: paused; }
 
-/* LINE Button */
+/* LINEボタン */
 .btn-line {
   display: flex;
   align-items: center;
@@ -843,7 +843,7 @@ em { font-style: italic; font-weight: 400; }
   100% { top: 100%; }
 }
 
-/* ========== Button ========== */
+/* ボタン */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -896,7 +896,7 @@ em { font-style: italic; font-weight: 400; }
   font-size: 16px;
 }
 
-/* ========== Marquee ========== */
+/* マーキー（流れるテキスト） */
 .marquee {
   display: none;
   position: relative;
@@ -956,8 +956,8 @@ em { font-style: italic; font-weight: 400; }
   line-height: 1.1;
 }
 
-/* ========== Reason ========== */
-/* ========== Before / After ========== */
+/* 選ばれる理由セクション */
+/* Before / After セクション */
 .bfa {
   display: none;
   background: linear-gradient(160deg, #fff5f3 0%, #ffe8e2 50%, #ffd6cc 100%);
@@ -1102,7 +1102,7 @@ em { font-style: italic; font-weight: 400; }
   user-select: none;
 }
 
-/* ブロック共通 */
+/* 理由ブロック共通スタイル */
 .reason__block {
   position: relative;
   margin-bottom: 48px;
@@ -1116,7 +1116,7 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 0;
 }
 
-/* ブロックヘッダー */
+/* 理由ブロック見出し */
 .reason__heading {
   position: relative;
   padding: 60px 20px 20px;
@@ -1154,7 +1154,7 @@ em { font-style: italic; font-weight: 400; }
   font-weight: 700;
 }
 
-/* ブロック本文エリア */
+/* 理由ブロック本文 */
 .reason__body {
   padding: 20px 18px 24px;
 }
@@ -1220,7 +1220,7 @@ em { font-style: italic; font-weight: 400; }
   font-family: var(--serif);
 }
 
-/* コールアウトボックス（独自構造） */
+/* コールアウトボックス */
 .reason__box {
   background: rgba(255,255,255,0.6);
   backdrop-filter: blur(20px);
@@ -1256,7 +1256,7 @@ em { font-style: italic; font-weight: 400; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-/* Layer cards */
+/* レイヤーカード（コーティング図解） */
 .reason__box-layers {
   display: flex;
   flex-direction: column;
@@ -1329,7 +1329,7 @@ em { font-style: italic; font-weight: 400; }
 .reason__layer-card--inner .reason__layer-sub strong {
   color: #b8832e;
 }
-/* Connector */
+/* カード間のコネクター */
 .reason__layer-connector {
   display: flex;
   align-items: center;
@@ -1354,7 +1354,7 @@ em { font-style: italic; font-weight: 400; }
   box-shadow: 0 0 6px rgba(212,132,90,0.5);
 }
 
-/* 成分バッジグリッド */
+/* 成分バッジのグリッドレイアウト */
 .reason__ingredient-list {
   list-style: none;
   padding: 0;
@@ -1384,8 +1384,7 @@ em { font-style: italic; font-weight: 400; }
   color: var(--text-sub);
 }
 
-/* 比較テーブル */
-/* 比較テーブル */
+/* 他社比較テーブル */
 .reason__body-text {
   margin: 28px 0 0;
   display: flex;
@@ -1511,7 +1510,7 @@ em { font-style: italic; font-weight: 400; }
   border-collapse: collapse;
 }
 
-/* ヘッダー行 */
+/* 比較テーブルのヘッダー行 */
 .reason__compare-header {
   display: grid;
   grid-template-columns: 28% 1fr 1fr;
@@ -1563,7 +1562,7 @@ em { font-style: italic; font-weight: 400; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* データ行 */
+/* 比較テーブルのデータ行 */
 .reason__compare-row {
   display: grid;
   grid-template-columns: 28% 1fr 1fr;
@@ -1644,7 +1643,7 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 2px;
 }
 
-/* ========== Statement ========== */
+/* コンセプトステートメント */
 .statement {
   position: relative;
   text-align: center;
@@ -1710,7 +1709,7 @@ em { font-style: italic; font-weight: 400; }
   color: var(--text-main);
 }
 
-/* ========== Empathy ========== */
+/* お悩み共感セクション */
 .section-chevron {
   width: 100%;
   line-height: 0;
@@ -1906,7 +1905,7 @@ em { font-style: italic; font-weight: 400; }
   .empathy__list { grid-template-columns: 1fr; }
 }
 
-/* ========== Pickup (交互レイアウト) ========== */
+/* ピックアップセクション */
 .pickup { position: relative; overflow: hidden; }
 .pickup::before {
   content: '';
@@ -2105,7 +2104,7 @@ em { font-style: italic; font-weight: 400; }
   .pickup__row--reverse .pickup__big-num { right: -15px; }
 }
 
-/* ========== Stats(数値訴求) ========== */
+/* 数値訴求セクション */
 .stats {
   position: relative;
   background: linear-gradient(180deg, transparent, rgba(255, 240, 235, 0.5), transparent);
@@ -2188,7 +2187,7 @@ em { font-style: italic; font-weight: 400; }
   .stats__list { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
 
-/* ========== CTA Mid ========== */
+/* 途中CTA */
 .cta-mid .section-inner { visibility: hidden; }
 .cta-mid {
   position: relative;
@@ -2240,7 +2239,7 @@ em { font-style: italic; font-weight: 400; }
   margin-top: -24px;
 }
 
-/* ========== Howto lead ========== */
+/* 使い方リード */
 .howto__title-sub {
   display: block;
   color: var(--text-main);
@@ -2263,7 +2262,7 @@ em { font-style: italic; font-weight: 400; }
   margin-top: -16px;
 }
 
-/* ========== 使用上の注意 ========== */
+/* 使用上の注意 */
 .caution__title-inline,
 .caution__title-inline span {
   display: inline !important;
@@ -2332,7 +2331,7 @@ em { font-style: italic; font-weight: 400; }
   margin-top: 2px;
 }
 
-/* ========== Benefit ========== */
+/* ベネフィットセクション */
 .benefit .section-inner {
   padding-bottom: 0;
 }
@@ -2477,7 +2476,7 @@ em { font-style: italic; font-weight: 400; }
   .benefit__list { grid-template-columns: repeat(3, 1fr); gap: 12px; }
 }
 
-/* ========== Mechanism ========== */
+/* メカニズムセクション */
 .mechanism {
   background: linear-gradient(180deg, rgba(255, 245, 243, 0.5), transparent);
   position: relative;
@@ -2622,7 +2621,7 @@ em { font-style: italic; font-weight: 400; }
   .mechanism__connector { flex: 0; transform: rotate(90deg); }
 }
 
-/* ========== Ingredients ========== */
+/* 配合成分セクション */
 .ingredients { position: relative; overflow: hidden; }
 .ingredients__grid {
   display: grid;
@@ -2701,7 +2700,7 @@ em { font-style: italic; font-weight: 400; }
   .ingredient { padding: 28px 14px; }
 }
 
-/* ========== Voice ========== */
+/* お客様の声セクション */
 .voice {
   position: relative;
   overflow: hidden;
@@ -2800,7 +2799,7 @@ em { font-style: italic; font-weight: 400; }
   .voice__item { padding: 48px 26px 28px; }
 }
 
-/* ========== How To ========== */
+/* 使い方セクション */
 .howto {
   position: relative;
   overflow: hidden;
@@ -2889,7 +2888,7 @@ em { font-style: italic; font-weight: 400; }
   .howto__list { grid-template-columns: 1fr; gap: 24px; }
 }
 
-/* ========== Compare ========== */
+/* 比較セクション */
 .compare__lead {
   text-align: center;
   font-size: 14px;
@@ -2949,7 +2948,7 @@ em { font-style: italic; font-weight: 400; }
   .compare__cell-product strong { font-size: 14px; }
 }
 
-/* ========== FAQ ========== */
+/* よくあるご質問 */
 .faq {
   position: relative;
   overflow: hidden;
@@ -3073,7 +3072,7 @@ em { font-style: italic; font-weight: 400; }
   letter-spacing: 0.08em;
 }
 
-/* ========== CTA Final ========== */
+/* 最終CTA */
 .cta-final .section-inner { visibility: hidden; }
 .cta-final {
   position: relative;
@@ -3180,7 +3179,7 @@ em { font-style: italic; font-weight: 400; }
   margin-top: 0;
 }
 
-/* ========== Sticky CTA ========== */
+/* 画面下部固定CTA */
 .sticky-cta {
   position: fixed;
   bottom: -100px;
@@ -3296,7 +3295,7 @@ em { font-style: italic; font-weight: 400; }
   .sticky-cta__btn { padding: 10px 18px; font-size: 11px; }
 }
 
-/* ========== Footer ========== */
+/* フッター */
 .footer {
   background: linear-gradient(180deg, rgba(255, 240, 235, 0.6), rgba(252, 220, 215, 0.7));
   padding: 80px 24px 100px;
@@ -3344,7 +3343,7 @@ em { font-style: italic; font-weight: 400; }
   letter-spacing: 0.15em;
 }
 
-/* ========== Reveal Animations ========== */
+/* スクロール時の出現アニメーション */
 .reveal, .reveal-up {
   opacity: 0;
   transform: translateY(40px);
@@ -3354,7 +3353,7 @@ em { font-style: italic; font-weight: 400; }
   opacity: 1;
   transform: translateY(0);
 }
-/* FV: 上からふわっと順番に */
+/* FVテキストの順番フェードイン */
 .fv .reveal {
   transform: translateY(-28px);
 }
@@ -3363,7 +3362,7 @@ em { font-style: italic; font-weight: 400; }
   transform: translateY(0);
 }
 
-/* ========== Mobile ========== */
+/* モバイル向け調整 */
 @media (max-width: 768px) {
   body { letter-spacing: 0.04em; }
   .header__inner { padding: 0 16px; }
@@ -3382,7 +3381,7 @@ em { font-style: italic; font-weight: 400; }
    ▼▼▼ v4: Feminine Magazine Layout ▼▼▼
 ======================================== */
 
-/* ========== Floating Blobs (浮遊する有機シェイプ) ========== */
+/* 浮遊する背景シェイプ */
 .floating-blobs {
   position: fixed;
   inset: 0;
@@ -3437,7 +3436,7 @@ em { font-style: italic; font-weight: 400; }
   }
 }
 
-/* ========== FV: マガジンカバー風レイアウト ========== */
+/* FV：マガジンカバー風レイアウト */
 .fv__layout {
   position: relative;
   z-index: 2;
@@ -3556,7 +3555,7 @@ em { font-style: italic; font-weight: 400; }
   text-align: left;
 }
 
-/* マガジンカバーメタ情報 */
+/* 号数・価格などのメタ情報 */
 .fv__cover-meta {
   position: absolute;
   top: 110px;
@@ -3590,7 +3589,7 @@ em { font-style: italic; font-weight: 400; }
   .fv__cover-meta { display: none; }
 }
 
-/* 手書き風タグ */
+/* 手書き風タグ装飾 */
 .fv__tags {
   display: flex;
   flex-wrap: wrap;
@@ -3612,7 +3611,7 @@ em { font-style: italic; font-weight: 400; }
 .hand-tag:nth-child(2) { transform: rotate(1deg); }
 .hand-tag:nth-child(3) { transform: rotate(-1deg); }
 
-/* FV右側ビジュアル */
+/* FV右側の商品ビジュアル */
 .fv__visual {
   position: relative;
   display: flex;
@@ -3678,7 +3677,7 @@ em { font-style: italic; font-weight: 400; }
   height: 320px;
 }
 
-/* 浮遊する小さなチップ */
+/* 浮かぶ成分バッジ */
 .fv__chip {
   position: absolute;
   background: rgba(255, 255, 255, 0.95);
@@ -3737,7 +3736,7 @@ em { font-style: italic; font-weight: 400; }
   50% { transform: translateY(-10px); }
 }
 
-/* FVモバイル */
+/* FVのスマホ向け調整 */
 @media (max-width: 900px) {
   .fv__layout { grid-template-columns: 1fr; gap: 40px; text-align: center; }
   .fv__copy { text-align: center; }
@@ -3750,7 +3749,7 @@ em { font-style: italic; font-weight: 400; }
   .chip-label { font-size: 9px; }
 }
 
-/* ========== Statement: 雑誌見開き ========== */
+/* コンセプトステートメント：雑誌見開き風 */
 .statement__layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -3825,7 +3824,7 @@ em { font-style: italic; font-weight: 400; }
   .statement__sign { justify-content: center; }
 }
 
-/* ========== Empathy: ジグザグ ========== */
+/* お悩みセクション：ジグザグレイアウト */
 .empathy__list--zigzag {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -5142,10 +5141,10 @@ body {
   }
 }
 
-/* ========== 低スペック端末向け: モバイルでアニメ軽減 ========== */
+/* 低スペック端末向け：アニメーション軽減 */
 @media (max-width: 600px) {
   .fv { padding-top: 60px; }
-  .blob { display: none; } /* スマホでは浮遊blob省略 */
+  .blob { display: none; } /* スマホではblob非表示 */
   .aurora { filter: blur(40px); }
   .fv__particles span { animation-duration: 18s; }
   .product-mockup__sparkles { display: none; }
@@ -5156,14 +5155,14 @@ body {
    ▼▼▼ v5.1: Animation Fix (FV復活) ▼▼▼
 ======================================== */
 
-/* contain プロパティを解除 (アニメ復活のため) */
+/* containを外してアニメーションを復活させる */
 .fv, .statement, .empathy, .pickup, .stats, .benefit,
 .mechanism, .ingredients, .voice, .howto, .compare,
 .faq, .cta-final, .cta-mid {
   contain: none !important;
 }
 
-/* FV内のアニメ要素を明示的に有効化 */
+/* FV内のアニメーション要素を有効化 */
 .fv__particles span {
   animation: particle-rise 12s linear infinite !important;
 }
@@ -5218,7 +5217,7 @@ body {
    ▼▼▼ v5.2: SVG Rotation Fix ▼▼▼
 ======================================== */
 
-/* SVGの回転軸を中央に修正 (デフォルトは左上で動かないように見える) */
+/* SVGの回転軸を中央に補正 */
 .circle-text-svg,
 .magazine__deco,
 .pickup__deco-svg {
@@ -5226,12 +5225,12 @@ body {
   transform-box: fill-box;
 }
 
-/* 円形フレーム内部の点線円 (こちらはdivなので元から中央でOKだが念のため) */
+/* 点線の円（divなので念のため中央指定） */
 .fv__circle-frame-inner {
   transform-origin: center center;
 }
 
-/* tech__ring も同様 */
+/* tech__ringも同様に中央指定 */
 .tech__ring {
   transform-origin: center center !important;
 }
@@ -5243,7 +5242,7 @@ body {
    上書きしてしまっていた問題を修正
 ======================================== */
 
-/* 回転アニメ要素は translateZ を外し、will-change で代替 */
+/* translateZを外してwill-changeで代替 */
 .circle-text-svg,
 .pickup__deco-svg,
 .magazine__deco,
@@ -5254,13 +5253,13 @@ body {
   backface-visibility: hidden;
 }
 
-/* keyframes で transform 上書き */
+/* keyframesでtransformを上書き */
 @keyframes circle-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* アニメーション再宣言 (translateZの上書き解除後の最終定義) */
+/* アニメーションの最終定義（translateZ解除後） */
 .circle-text-svg {
   animation: circle-rotate 40s linear infinite !important;
   transform-origin: center center !important;
@@ -5287,7 +5286,7 @@ body {
 ======================================== */
 
 
-/* ドロワー */
+/* ドロワー本体 */
 .drawer {
   position: fixed;
   top: 0;
@@ -5349,7 +5348,7 @@ body {
   text-align: center;
 }
 
-/* オーバーレイ */
+/* ドロワー背景オーバーレイ */
 .drawer-overlay {
   position: fixed;
   inset: 0;
@@ -5364,7 +5363,7 @@ body {
   pointer-events: auto;
 }
 
-/* ドロワー開いた時にbodyをロック */
+/* ドロワー開放時のスクロールロック */
 body.drawer-open {
   overflow: hidden;
 }
@@ -5397,7 +5396,7 @@ body.drawer-open {
   .fv__tags { gap: 8px; }
   .hand-tag { font-size: 15px; padding: 6px 14px; }
 
-  /* ボタン タッチ最小44px確保 */
+  /* ボタンのタッチ領域を最低44pxに */
   .btn-primary {
     padding: 16px 28px;
     font-size: 13px;
@@ -5410,7 +5409,7 @@ body.drawer-open {
     max-width: 340px;
   }
 
-  /* section余白 */
+  /* セクション余白 */
   .section-inner {
     padding: 44px 0;
   }
@@ -5420,7 +5419,7 @@ body.drawer-open {
     letter-spacing: 0.08em;
   }
 
-  /* Statement */
+  /* ステートメント */
   .statement {
     padding: 80px 0;
   }
@@ -5435,7 +5434,7 @@ body.drawer-open {
     font-size: 56px;
   }
 
-  /* Stats */
+  /* 数値訴求 */
   .stats__grid {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
@@ -5447,7 +5446,7 @@ body.drawer-open {
     grid-column: span 2;
   }
 
-  /* Benefit階段 → スマホでフラット(1列) */
+  /* Benefit：スマホでは1列に */
   .benefit__list--stairs {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -5458,7 +5457,7 @@ body.drawer-open {
     margin-top: 0;
   }
 
-  /* Mechanism Timeline */
+  /* メカニズムのタイムライン */
   .mechanism__t-item {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -5471,7 +5470,7 @@ body.drawer-open {
     font-size: 22px;
   }
 
-  /* Ingredients bento */
+  /* 成分ベントグリッド */
   .ingredients__bento {
     grid-template-columns: 1fr 1fr;
     gap: 12px;
@@ -5490,7 +5489,7 @@ body.drawer-open {
     padding: 24px 14px;
   }
 
-  /* Voice masonry */
+  /* 口コミのマソンリー */
   .voice__masonry {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -5499,7 +5498,7 @@ body.drawer-open {
     padding: 48px 22px 28px;
   }
 
-  /* How To */
+  /* 使い方 */
   .howto__list {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -5513,7 +5512,7 @@ body.drawer-open {
     margin-bottom: 24px;
   }
 
-  /* Compare */
+  /* 比較テーブル */
   .compare__row {
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
     padding: 12px 6px;
@@ -5541,7 +5540,7 @@ body.drawer-open {
     padding: 0 18px 22px;
   }
 
-  /* CTA Final */
+  /* 最終CTA */
   .cta-final {
     padding: 80px 20px 100px;
   }
@@ -5554,7 +5553,7 @@ body.drawer-open {
     font-size: clamp(42px, 12vw, 60px);
   }
 
-  /* Sticky CTA */
+  /* 固定CTA */
   .sticky-cta__inner {
     padding: 10px 16px;
     gap: 10px;
@@ -5573,7 +5572,7 @@ body.drawer-open {
     flex-shrink: 0;
   }
 
-  /* Empathy accordion */
+  /* お悩みアコーディオン */
   .empathy__acc-q {
     padding: 18px 16px;
     gap: 12px;
@@ -5596,7 +5595,7 @@ body.drawer-open {
     font-size: 11px;
   }
 
-  /* Magazine */
+  /* マガジン風レイアウト */
   .magazine__layout--1,
   .magazine__layout--2,
   .magazine__layout--3 {
@@ -5614,7 +5613,7 @@ body.drawer-open {
     font-size: 18px;
   }
 
-  /* Footer */
+  /* フッター */
   .footer {
     padding: 60px 20px 80px;
   }
@@ -5624,7 +5623,7 @@ body.drawer-open {
     align-items: center;
   }
 
-  /* Marquee */
+  /* マーキー */
   .marquee__item {
     font-size: 15px;
   }
@@ -5638,7 +5637,7 @@ body.drawer-open {
    ▼▼▼ v5.4: 円周文字を親divで回転(確実な方法) ▼▼▼
 ======================================== */
 
-/* SVG自体のアニメは止めて、親div .fv__circle-text を回転させる */
+/* SVGは止めて親divを回転させる */
 .circle-text-svg {
   animation: none !important;
   transform: none !important;
@@ -5702,9 +5701,9 @@ body.drawer-open {
   .fv__layout { position: static; }
   .fv__copy { position: static; }
   .fv__cta-area { position: static; margin-top: 0; }
-  /* SP用CTAをPC上で非表示 */
+  /* スマホ用CTAをPCで非表示 */
   .fv__cta:not(.fv__cta--pc-fixed) { display: none !important; }
-  /* PC専用固定CTA */
+  /* PC用固定CTA */
   .fv__cta--pc-fixed { display: block !important; position: fixed; bottom: 8px; right: 2%; z-index: 99999; }
   .fv__left-group { width: min(90%, 480px); left: 28%; top: 60px; }
   .fv__product-img { width: 40%; max-width: 300px; top: 45%; }
@@ -5757,7 +5756,7 @@ body.drawer-open {
     box-shadow: 0 0 0 4px rgba(255,255,255,0.95), 0 0 40px 14px rgba(255,255,255,0.8), 0 4px 14px rgba(0,0,0,0.1);
   }
 
-  /* Mechanism: 横3列 */
+  /* メカニズム：PC3列レイアウト */
   .mechanism__timeline {
     display: flex;
     flex-direction: row;
@@ -5787,14 +5786,14 @@ body.drawer-open {
     margin-right: 0;
   }
 
-  /* FAQ Q4 改行抑制 */
+  /* FAQ Q4の改行を抑制 */
   .faq__item:nth-child(4) .faq__a br { display: none; }
 
-  /* Caution */
+  /* 使用上の注意 */
   .caution__list { max-width: 900px; }
   .caution__list li { font-size: 15px; }
 
-  /* Benefit: 横3列・上揃え */
+  /* Benefit：PC3列・上揃え */
   .benefit__list--stairs {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -5850,13 +5849,13 @@ body.drawer-open {
    ============================================================ */
 @media (min-width: 768px) {
 
-  /* セクション */
+  /* セクション余白 */
   .reason {
     background: #fff;
   }
   .reason::before { display: none; }
 
-  /* ブロック: カードなし・仕切り線のみ */
+  /* 理由ブロック：仕切り線のみ */
   .reason__block {
     display: grid;
     grid-template-columns: 360px 1fr;
@@ -5874,7 +5873,7 @@ body.drawer-open {
     margin-bottom: 0;
   }
 
-  /* 見出し側 */
+  /* 見出しエリア */
   .reason__heading {
     background: transparent;
     border-bottom: none;
@@ -5910,14 +5909,14 @@ body.drawer-open {
     font-weight: 700;
   }
 
-  /* 本文側 */
+  /* 本文エリア */
   .reason__body {
     background: transparent;
     border-left: 1px solid rgba(232,90,74,0.18);
     padding: 0 0 0 48px;
   }
 
-  /* 02ブロックのみ反転 */
+  /* 02ブロックだけ左右反転 */
   .reason__block:nth-child(3) {
     grid-template-columns: 1fr 320px;
   }
@@ -5933,7 +5932,7 @@ body.drawer-open {
     padding: 0 48px 0 0;
   }
 
-  /* 成分ベントー 4列 */
+  /* 成分ベント：4列 */
   .ingredients__bento {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -5979,25 +5978,25 @@ body.drawer-open {
    タブレット調整 (min-width: 768px) and (max-width: 1024px)
    ============================================================ */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* FV: SALMONINJECTION.PNG を少し大きく */
+  /* FV：メイン画像をやや拡大 */
   .fv__product-img { width: 48%; max-width: 360px; }
 
-  /* FV: 画像を少し小さく（ラインも追従） */
+  /* FV：画像をやや縮小（ラインも追従） */
   .fv__left-group { width: min(85%, 450px); left: 28%; top: 60px; }
   .fv__col-img--pc-only { width: 130% !important; max-width: none !important; position: relative; top: -30px; left: 30px; }
   .fv__left-group .fv__col-img:nth-of-type(4),
   .fv__left-group .fv__col-img:nth-of-type(5) { position: relative; top: -60px; }
   .fv__left-group .deco-line { position: relative; top: -60px; }
 
-  /* 各セクション上部余白を統一（FV・インフルエンサー除く） */
+  /* セクション上部余白を統一 */
   .section-inner { padding-top: 60px; }
   .fv .section-inner { padding-top: 140px; }
   .influencer .section-inner { padding-top: 140px; }
 
-  /* はみ出し防止 */
+  /* 横はみ出し防止 */
   .reason__text-hero { font-size: clamp(16px, 2.2vw, 22px); white-space: nowrap; }
 
-  /* Benefit: タブレット3列・余白を最小化して円を大きく */
+  /* Benefit：3列・円を大きく */
   .benefit .section-inner { max-width: 100%; padding-left: 4px; padding-right: 4px; }
   .benefit__list--stairs {
     grid-template-columns: repeat(3, 1fr);
@@ -6022,7 +6021,7 @@ body.drawer-open {
 
 }
 
-/* PC専用 CTA ボタンサイズ */
+/* PC用CTAボタンサイズ */
 @media (min-width: 1025px) {
   .cta-mid__btn-area .btn-primary,
   .cta-final__btn-area .btn-primary {

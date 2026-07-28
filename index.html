@@ -13,17 +13,17 @@
 </head>
 <body>
 
-<!-- ノイズオーバーレイ -->
+<!-- 背景のざらつきテクスチャ -->
 <div class="noise-overlay"></div>
 
-<!-- ふんわり装飾blob(浮遊するシェイプ) -->
+<!-- 背景に浮かぶ装飾シェイプ -->
 <div class="floating-blobs" aria-hidden="true">
   <div class="blob blob--1"></div>
   <div class="blob blob--2"></div>
   <div class="blob blob--3"></div>
 </div>
 
-<!-- ========== ヘッダー ========== -->
+<!-- ヘッダー -->
 <header class="header">
   <div class="header__inner">
     <a href="#top" class="header__logo">
@@ -42,7 +42,7 @@
   </div>
 </header>
 
-<!-- モバイルドロワーナビ -->
+<!-- スマホ用ドロワーメニュー -->
 <div class="drawer" aria-hidden="true">
   <nav class="drawer__nav">
     <a href="#concept" class="drawer__link"><span class="drawer__num">01</span>Concept</a>
@@ -54,7 +54,7 @@
 </div>
 <div class="drawer-overlay"></div>
 
-<!-- ========== FV(MAGAZINE COVER風) ========== -->
+<!-- ファーストビュー（雑誌カバー風） -->
 <section class="fv" id="top">
   <div class="fv__left-group">
     <img src="images/fv-01.png" alt="" class="fv__col-img">
@@ -86,10 +86,10 @@
     <span></span><span></span>
   </div>
 
-  <!-- 大きな英字背景タイポ -->
+  <!-- 背景の大きな英字装飾 -->
   <div class="fv__bg-text" aria-hidden="true">LUMIÈRE</div>
 
-  <!-- マガジンカバー風: ISSUE情報 -->
+  <!-- 号数・価格などのメタ情報 -->
   <div class="fv__cover-meta">
     <div class="fv__cover-meta-item">
       <span class="meta-en">VOL. 01</span>
@@ -101,7 +101,7 @@
     </div>
   </div>
 
-  <!-- 縦書きサイドキャッチ -->
+  <!-- 縦書きのサイドコピー -->
   <div class="fv__side fv__side--left">
     <span class="vertical-text">塗 る サ ー モ ン 注 入 美 容</span>
   </div>
@@ -110,7 +110,7 @@
   </div>
 
   <div class="fv__layout">
-    <!-- LEFT: コピー -->
+    <!-- 左側：キャッチコピーエリア -->
     <div class="fv__copy">
       <p class="fv__lead reveal" data-delay="0">\ SNSで注目の成分配合 /</p>
       <h1 class="fv__title">
@@ -163,12 +163,12 @@
 
     </div>
 
-    <!-- RIGHT: 商品ビジュアル -->
+    <!-- 右側：商品ビジュアルエリア -->
     <div class="fv__visual">
 
       <img src="images/product-salmon-injection.png" alt="SC SALMON INJECTION" class="fv__product-img">
 
-      <!-- 浮遊する小さなチップ -->
+      <!-- 浮かぶ成分バッジ -->
       <div class="fv__chip fv__chip--1 reveal" data-delay="1600">
         <span class="chip-num">8</span>
         <span class="chip-label">美容成分<br>厳選配合</span>
@@ -190,7 +190,7 @@
   </div>
 </section>
 
-<!-- ========== Marquee ========== -->
+<!-- 流れるテキストマーキー -->
 <div class="marquee">
   <div class="marquee__track">
     <span class="marquee__item">PDRN COATING SPICULE</span>
@@ -214,7 +214,7 @@
   </div>
 </div>
 
-<!-- ========== 共感セクション(ジグザグ配置) ========== -->
+<!-- お悩み共感セクション -->
 <section class="empathy" id="concept">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Your Worries —</p>
@@ -224,7 +224,7 @@
     </h2>
     <p class="empathy__sub reveal-up">ひとつでも当てはまったら、<span class="empathy__sub--accent">タップして確認してください</span></p>
 
-    <!-- アコーディオン形式: 見出しクリックで詳細表示 -->
+    <!-- 各お悩みはタップで詳細が開く -->
     <ul class="empathy__accordion">
       <li class="empathy__acc-item reveal-up" data-delay="100">
         <button class="empathy__acc-q" type="button">
@@ -297,7 +297,7 @@
   </div>
 </section>
 
-<!-- ========== インフルエンサーセクション ========== -->
+<!-- インフルエンサーセクション -->
 <section class="influencer">
   <div class="influencer__chevron" aria-hidden="true">
     <svg viewBox="0 0 375 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -317,7 +317,7 @@
       <div class="insta-card"><img src="images/review-06.webp" alt=""></div>
       <div class="insta-card"><img src="images/review-07.webp" alt=""></div>
       <div class="insta-card"><img src="images/review-08.webp" alt=""></div>
-      <!-- 無限ループ用複製 -->
+      <!-- ループ用の複製（無限スクロール） -->
       <div class="insta-card"><img src="images/review-01.webp" alt=""></div>
       <div class="insta-card"><img src="images/review-02.webp" alt=""></div>
       <div class="insta-card"><img src="images/review-03.webp" alt=""></div>
@@ -330,7 +330,7 @@
   </div>
 </section>
 
-<!-- ========== Before / After Section ========== -->
+<!-- Before / After セクション -->
 <section class="bfa">
   <div class="bfa__inner">
     <p class="bfa__small-title">— Before / After —</p>
@@ -339,12 +339,12 @@
   </div>
 </section>
 
-<!-- ========== Reason Section ========== -->
+<!-- 選ばれる3つの理由セクション -->
 <section class="reason">
   <div class="section-inner">
     <h2 class="section__title reveal-up">多くの方に選ばれ続ける<br><span class="reason-title-line"><span class="reason__title-num">3</span><span class="accent">つの理由</span></span></h2>
 
-    <!-- ① -->
+    <!-- 理由① PDRNコーティングスピキュール -->
     <div class="reason__block reason__block--01 reveal-up">
       <h3 class="reason__heading">
         <span class="reason__num" aria-hidden="true">01</span>
@@ -357,7 +357,7 @@
 
         <div class="reason__box">
           <p class="reason__box-title">独自のコーティングスピキュール</p>
-          <img src="images/ingredient-needle.png" alt="二重構造スピキュール図解" class="reason__box-img">
+          <img src="images/ingredient-needle.png" alt="PDRNコーティングスピキュール図解" class="reason__box-img">
           <div class="reason__box-layers">
             <div class="reason__layer-card reason__layer-card--outer">
               <div class="reason__layer-label">外側</div>
@@ -383,7 +383,7 @@
       </div>
     </div>
 
-    <!-- ② -->
+    <!-- 理由② 圧倒的コスパ＆個包装 -->
     <div class="reason__block reveal-up">
       <h3 class="reason__heading">
         <span class="reason__num" aria-hidden="true">02</span>
@@ -443,7 +443,7 @@
       </div>
     </div>
 
-    <!-- ③ -->
+    <!-- 理由③ 8種の美容成分 -->
     <div class="reason__block reveal-up">
       <h3 class="reason__heading">
         <span class="reason__num" aria-hidden="true">03</span>
@@ -543,7 +543,7 @@
   </div>
 </section>
 
-<!-- ========== メカニズム(タイムライン縦軸) ========== -->
+<!-- メカニズムセクション（縦タイムライン） -->
 <section class="mechanism" id="mechanism">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Mechanism —</p>
@@ -555,7 +555,7 @@
       3つのメカニズムで、角質層を整える。
     </p>
 
-    <!-- 縦タイムライン型 -->
+    <!-- 刺さる→届ける→整える の3ステップ -->
     <ol class="mechanism__timeline">
       <li class="mechanism__t-item reveal-up" data-delay="100">
         <div class="mechanism__t-line"></div>
@@ -615,7 +615,7 @@
   </div>
 </section>
 
-<!-- ========== ベネフィット(階段状ステップレイアウト) ========== -->
+<!-- 期待できるベネフィットセクション -->
 <section class="benefit">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Benefit —</p>
@@ -628,7 +628,7 @@
       鏡を見るたび自信が持てる肌へ導く
     </p>
 
-    <!-- 階段状レイアウト -->
+    <!-- ベネフィットを階段状に並べる -->
     <ul class="benefit__list benefit__list--stairs">
       <li class="benefit__item benefit__item--1 reveal-up" data-delay="100">
         <div class="benefit__inner">
@@ -693,7 +693,7 @@
   </div>
 </section>
 
-<!-- ========== Voice(マゾンリー風 高さ不揃い) ========== -->
+<!-- お客様の声セクション -->
 <section class="voice" id="voice">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Voice —</p>
@@ -751,7 +751,7 @@
             </div>
           </div>
         </div>
-        <!-- duplicate for seamless loop -->
+        <!-- シームレスループ用の複製 -->
         <div class="voice__item voice__item--tall" aria-hidden="true">
           <div class="voice__rating">★★★★★</div>
           <h3 class="voice__title">夕方も、トーンが<br>明るいまま。</h3>
@@ -806,7 +806,7 @@
   </div>
 </section>
 
-<!-- ========== CTA① ========== -->
+<!-- 途中CTA -->
 <section class="cta-mid">
   <div class="aurora-bg aurora-bg--soft">
     <div class="aurora aurora--1"></div>
@@ -845,7 +845,7 @@
   </div>
 </section>
 
-<!-- ========== How To(横に流れるレシピ風) ========== -->
+<!-- 使い方セクション -->
 <section class="howto" id="howto">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— How To Use —</p>
@@ -903,7 +903,7 @@
   </div>
 </section>
 
-<!-- ========== 使用上の注意 ========== -->
+<!-- 使用上の注意 -->
 <section class="caution">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Caution —</p>
@@ -928,7 +928,7 @@
   </div>
 </section>
 
-<!-- ========== 比較セクション ========== -->
+<!-- 他製品との比較セクション -->
 <section class="compare">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Comparison —</p>
@@ -973,7 +973,7 @@
   </div>
 </section>
 
-<!-- ========== FAQ ========== -->
+<!-- よくあるご質問 -->
 <section class="faq">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— FAQ —</p>
@@ -1041,7 +1041,7 @@
   </div>
 </section>
 
-<!-- ========== 最終CTA ========== -->
+<!-- 最終CTA -->
 <section class="cta-final" id="cta">
   <div class="cta-final__btn-area">
     <div class="fv__cta-wrap">
@@ -1076,7 +1076,7 @@
   </div>
 </section>
 
-<!-- ========== 成分(横スクロール+不揃いグリッド) ========== -->
+<!-- 配合成分セクション -->
 <section class="ingredients">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Ingredients —</p>
@@ -1085,7 +1085,7 @@
       <span class="accent">10種の美容成分<sup>※</sup></span>
     </h2>
 
-    <!-- Bento不揃いグリッド -->
+    <!-- ベントグリッドレイアウト -->
     <div class="ingredients__bento">
       <div class="ingredient ingredient--hero reveal-up" data-delay="50">
         <div class="ingredient__num">01</div>
@@ -1134,7 +1134,7 @@
   </div>
 </section>
 
-<!-- ========== Concept Statement(雑誌の見開き風) ========== -->
+<!-- コンセプトステートメント（雑誌見開き風） -->
 <section class="statement">
   <div class="statement__layout">
     <div class="statement__left">
@@ -1165,7 +1165,7 @@
   </div>
 </section>
 
-<!-- ========== Pick Up(マガジンスプレッド風 - 雑誌見開き) ========== -->
+<!-- ピックアップセクション（雑誌スプレッド風） -->
 <section class="pickup">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Pick Up —</p>
@@ -1174,15 +1174,15 @@
       <span class="accent">PDRN × スピキュール</span>
     </h2>
 
-    <!-- 雑誌風レイアウト 1: 大きな数字 + 写真上下 + 引用 -->
+    <!-- ピックアップ①：大きな数字と写真 -->
     <article class="magazine reveal-up">
       <div class="magazine__layout magazine__layout--1">
-        <!-- 巨大番号 -->
+        <!-- 背景の大きな数字 -->
         <div class="magazine__num">
           <span class="num-bg">01</span>
           <span class="num-label">No.01</span>
         </div>
-        <!-- 画像 -->
+        <!-- メイン画像 -->
         <div class="magazine__visual magazine__visual--1">
           <div class="magazine__img magazine__img--1">
             <span class="magazine__img-label">SPICULE</span>
@@ -1191,13 +1191,13 @@
               <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,0.5)" stroke-dasharray="2 4"/>
             </svg>
           </div>
-          <!-- ポラロイドサブ写真 -->
+          <!-- サブのポラロイド風写真 -->
           <div class="magazine__polaroid magazine__polaroid--1">
             <div class="polaroid-img polaroid-img--a"></div>
             <span class="polaroid-caption">微細針構造</span>
           </div>
         </div>
-        <!-- テキスト -->
+        <!-- テキストエリア -->
         <div class="magazine__text">
           <p class="magazine__en">— Feature —</p>
           <h3 class="magazine__title">
@@ -1219,7 +1219,7 @@
       </div>
     </article>
 
-    <!-- 雑誌風レイアウト 2: 逆配置 -->
+    <!-- ピックアップ②：逆配置レイアウト -->
     <article class="magazine reveal-up">
       <div class="magazine__layout magazine__layout--2">
         <div class="magazine__num magazine__num--right">
@@ -1260,7 +1260,7 @@
       </div>
     </article>
 
-    <!-- 雑誌風レイアウト 3 -->
+    <!-- ピックアップ③ -->
     <article class="magazine reveal-up">
       <div class="magazine__layout magazine__layout--3">
         <div class="magazine__num">
@@ -1304,7 +1304,7 @@
   </div>
 </section>
 
-<!-- ========== Stats(数値訴求 - 6カラム不揃いグリッド) ========== -->
+<!-- 数値で見る実力セクション -->
 <section class="stats">
   <div class="section-inner">
     <p class="section__small-title reveal-up">— Numbers —</p>
@@ -1341,7 +1341,7 @@
 
 
 
-<!-- ========== Sticky CTA ========== -->
+<!-- 画面下部に固定されるCTA -->
 <div class="sticky-cta" id="stickyCTA">
   <div class="sticky-cta__inner">
     <div class="sticky-cta__info">
@@ -1364,7 +1364,7 @@
   </div>
 </div>
 
-<!-- ========== フッター ========== -->
+<!-- フッター -->
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__logo">SC SALMON INJECTION</div>
@@ -1409,7 +1409,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-<!-- PC専用固定CTA（SP非表示） -->
+<!-- PC用固定CTA（スマホでは非表示） -->
 <div class="fv__cta fv__cta--pc-fixed">
   <div class="fv__cta-wrap">
     <a href="https://amenity-lab.shop/cart/50232869814509:1" target="_blank" rel="noopener" class="btn-primary btn-primary--full btn-shimmer magnetic-btn">
