@@ -959,11 +959,22 @@ em { font-style: italic; font-weight: 400; }
 /* 選ばれる理由セクション */
 /* Before / After セクション */
 .bfa {
-  display: none;
-  background: linear-gradient(160deg, #fff5f3 0%, #ffe8e2 50%, #ffd6cc 100%);
-  padding: 48px 24px 52px;
+  display: block;
+  background: linear-gradient(180deg, transparent, rgba(255, 245, 243, 0.7));
+  padding: 64px 20px 0;
   position: relative;
   overflow: hidden;
+}
+.bfa__chevron {
+  width: 100%;
+  line-height: 0;
+  position: relative;
+  z-index: 1;
+}
+.bfa__chevron svg {
+  display: block;
+  width: 100%;
+  height: 72px;
 }
 .bfa::before {
   content: '';
@@ -973,6 +984,20 @@ em { font-style: italic; font-weight: 400; }
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%);
   pointer-events: none;
+}
+.bfa::after {
+  content: 'BEFORE AFTER';
+  position: absolute;
+  top: 80px;
+  right: -40px;
+  font-family: var(--display);
+  font-size: clamp(80px, 22vw, 160px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 180, 165, 0.08);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
 }
 .bfa__inner {
   max-width: 480px;
@@ -1010,6 +1035,7 @@ em { font-style: italic; font-weight: 400; }
 .bfa__title-accent {
   display: block;
   font-size: clamp(32px, 6vw, 58px);
+  text-align: center;
   background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1081,6 +1107,242 @@ em { font-style: italic; font-weight: 400; }
   font-size: 11px;
   color: #9e6050;
   margin: 0;
+}
+
+/* BFA 新要素 */
+.bfa__real-skin {
+  font-family: var(--display-alt);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  color: var(--salmon-600);
+  text-align: center;
+  margin: 0 0 40px;
+  text-transform: uppercase;
+}
+.bfa__case {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(232,90,74,0.10);
+  padding: 28px 20px 24px;
+  margin-bottom: 28px;
+}
+.bfa__case-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.bfa__case-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bfa__case-en {
+  font-family: var(--display-alt);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+.bfa__case-label {
+  font-family: var(--mincho);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-main);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bfa__case-num {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--salmon-500), var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  flex-shrink: 0;
+}
+.bfa__case-person {
+  background: var(--salmon-50);
+  color: var(--salmon-600);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.bfa__photos {
+  margin: 0 -20px 10px;
+}
+.bfa__photo-single {
+  position: relative;
+  overflow: hidden;
+}.bfa__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.bfa__photo-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.bfa__photo-tag--after {
+  background: var(--salmon-600);
+}
+.bfa__photo-tag--right {
+  left: auto;
+  right: 10px;
+}
+.bfa__disclaimer {
+  font-size: 10px;
+  color: var(--text-light);
+  margin: 0 0 16px;
+  text-align: center;
+}
+.bfa__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.bfa__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 16px 0;
+}
+.bfa__detail-row {
+  padding: 14px 16px;
+  border-radius: 12px;
+  position: relative;
+}
+.bfa__detail-row--worry {
+  background: var(--salmon-50);
+  margin-bottom: 28px;
+}
+.bfa__detail-row--worry::after {
+  content: '↓';
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: var(--salmon-400);
+  line-height: 1;
+}
+.bfa__detail-row--result {
+  background: linear-gradient(135deg, rgba(255, 220, 210, 0.45), rgba(255, 240, 210, 0.5));
+}
+.bfa__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+.bfa__tag--worry {
+  background: var(--salmon-100);
+  color: var(--salmon-700);
+}
+.bfa__tag--result {
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400));
+  color: #fff;
+}
+.bfa__detail-text {
+  font-size: 14px;
+  color: var(--text-main);
+  line-height: 1.7;
+  margin: 0;
+}
+.bfa__detail-row--result .bfa__detail-text {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bfa__quote {
+  background: transparent;
+  border-radius: 0;
+  padding: 14px 0;
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.75;
+  margin: 0;
+  font-style: normal;
+}
+.bfa__cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-light);
+  text-align: right;
+}
+.bfa__notes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 48px;
+  text-align: center;
+}
+.bfa__notes li {
+  font-size: 10px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+.bfa__why {
+  text-align: center;
+  padding: 20px 16px 0;
+}
+.bfa__why-en {
+  font-family: var(--display-alt);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--salmon-500);
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+.bfa__why-title {
+  font-family: var(--mincho);
+  font-size: clamp(24px, 6vw, 40px);
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  margin: 0 0 20px;
+}
+.bfa__why-sub {
+  font-size: 15px;
+  color: var(--text-sub);
+  margin: 0 0 8px;
+}
+.bfa__why-key {
+  font-family: var(--mincho);
+  font-size: clamp(22px, 5.5vw, 36px);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--salmon-600), var(--salmon-400) 50%, var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.4;
+  margin: 0;
+}
+.bfa__why-key-note {
+  font-size: 0.75em;
+  font-weight: 500;
 }
 
 .reason {
@@ -2845,22 +3107,32 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 32px;
 }
 .howto__img {
-  width: 180px; height: 180px;
   margin: 0 auto 32px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--salmon-200), var(--salmon-300), var(--gold-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: transparent;
   position: relative;
-  overflow: hidden;
-  box-shadow:
-    0 20px 40px rgba(248, 121, 104, 0.2),
-    inset -10px -10px 30px rgba(248, 121, 104, 0.15),
-    inset 10px 10px 30px rgba(255, 255, 255, 0.5);
 }
 .howto__svg {
   width: 80px; height: 80px;
+}
+.howto__img-photo {
+  height: auto;
+  display: block;
+}
+@media (max-width: 767px) {
+  .howto__img {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .howto__img-photo {
+    width: 100%;
+  }
+  .cta-mid,
+  .cta-final {
+    background-image: url('images/bg-img-01-model-v2.webp');
+    background-position: 60% top;
+  }
 }
 .howto__title {
   font-family: var(--serif);
@@ -5507,9 +5779,12 @@ body.drawer-open {
     padding: 36px 22px;
   }
   .howto__img {
-    width: 140px;
-    height: 140px;
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 24px;
+    height: auto;
   }
 
   /* 比較テーブル */
@@ -6019,6 +6294,43 @@ body.drawer-open {
     line-height: 1.75;
   }
 
+}
+
+/* スマホ: 中間CTAと最終CTAの背景画像・位置・サイズを統一 */
+@media (max-width: 767px) {
+  .cta-mid,
+  .cta-final {
+    padding: 0;
+    min-height: 520px;
+    background-image: url('images/bg-img-01-model-v2.webp');
+    background-position: 80% -100px;
+    background-size: 150%;
+  }
+  .cta-mid .section-inner,
+  .cta-final .section-inner {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+  }
+  .cta-mid__btn-area,
+  .cta-final__btn-area {
+    bottom: 2%;
+  }
+  .cta-mid__deco-img2 {
+    filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 6px #fff) drop-shadow(0 0 10px rgba(255,255,255,0.9)) !important;
+  }
+  .cta-mid__deco-img3 {
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.9)) drop-shadow(0 0 5px rgba(255,255,255,0.6)) !important;
+  }
+  .cta-mid__deco-img {
+    top: 6%;
+  }
+  .cta-mid__deco-img2 {
+    top: 30%;
+  }
+  .cta-mid__deco-img3 {
+    top: 42%;
+  }
 }
 
 /* PC用CTAボタンサイズ */
