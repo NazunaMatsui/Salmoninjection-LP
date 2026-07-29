@@ -6296,6 +6296,17 @@ body.drawer-open {
 
 }
 
+/* スマホ: reason__text--center を中央揃えに */
+@media (max-width: 767px) {
+  .reason__text--center {
+    text-align: center;
+  }
+  .reason__box-title {
+    font-size: 14px;
+    font-weight: 800;
+  }
+}
+
 /* スマホ: 中間CTAと最終CTAの背景画像・位置・サイズを統一 */
 @media (max-width: 767px) {
   .cta-mid,
