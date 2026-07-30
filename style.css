@@ -6391,7 +6391,7 @@ body.drawer-open {
   box-shadow:
     0 15px 35px rgba(248, 121, 104, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 0 15px 4px rgba(255, 255, 255, 0.5);
+    0 0 12px 4px rgba(255, 255, 255, 1);
 }
 
 /* スマホ: 中間CTA・最終CTAボタンを上に移動、テキストを下に移動 */
