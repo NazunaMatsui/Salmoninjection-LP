@@ -355,7 +355,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .cta-mid__img-group {
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -721,7 +721,7 @@ em { font-style: italic; font-weight: 400; }
 }
 .fv__cta-area {
   position: relative;
-  margin-top: -44px;
+  margin-top: -24px;
 }
 .fv__cta {
   position: relative;
@@ -740,12 +740,12 @@ em { font-style: italic; font-weight: 400; }
 .fv__col-img--pc-only { display: none !important; }
 .fv__product-img--sp {
   display: block;
-  width: 110px;
+  width: 118px;
   max-width: none;
   object-fit: contain;
   position: absolute;
   top: auto;
-  bottom: 110%;
+  bottom: 138%;
   left: 90%;
   transform: translateX(-50%) rotate(8deg);
   filter: drop-shadow(0 0 4px #fff) drop-shadow(0 0 8px #fff) drop-shadow(0 0 14px #fff) drop-shadow(0 0 20px rgba(255,255,255,0.9));
@@ -859,7 +859,9 @@ em { font-style: italic; font-weight: 400; }
   border-radius: 50px;
   box-shadow:
     0 15px 35px rgba(248, 121, 104, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 40px 15px rgba(255, 255, 255, 1),
+    0 0 20px 8px rgba(255, 255, 255, 1);
   position: relative;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1234,7 +1236,7 @@ em { font-style: italic; font-weight: 400; }
   margin-bottom: 28px;
 }
 .bfa__detail-row--worry::after {
-  content: '↓';
+  content: '\2193';
   position: absolute;
   bottom: -24px;
   left: 50%;
@@ -5979,9 +5981,9 @@ body.drawer-open {
   /* スマホ用CTAをPCで非表示 */
   .fv__cta:not(.fv__cta--pc-fixed) { display: none !important; }
   /* PC用固定CTA */
-  .fv__cta--pc-fixed { display: block !important; position: fixed; bottom: 8px; right: 2%; z-index: 99999; }
+  .fv__cta--pc-fixed { display: block !important; position: fixed; bottom: 24px; right: 2%; z-index: 99999; }
   .fv__left-group { width: min(90%, 480px); left: 28%; top: 60px; }
-  .fv__product-img { width: 40%; max-width: 300px; top: 45%; }
+  .fv__product-img { width: 40%; max-width: 300px; top: 45%; left: 40%; }
   .influencer::before { background: url('images/bg-pc.webp') center top / cover no-repeat; }
   .influencer { min-height: 66.7vw; }
   .influencer__heading { max-width: 520px; }
@@ -6342,6 +6344,93 @@ body.drawer-open {
   .cta-mid__deco-img3 {
     top: 42%;
   }
+}
+
+
+/* PC用: FV下部に注釈を固定 */
+.fv__cta-note--fv-bottom {
+  display: none;
+}
+@media (min-width: 768px) {
+  .fv__cta-note--fv-bottom {
+    display: block;
+    position: absolute;
+    bottom: 16px;
+    right: 24px;
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+
+/* PC用: bfaケースを横並び */
+@media (min-width: 768px) {
+  .bfa__inner {
+    max-width: 1000px;
+  }
+  .bfa__cases {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .bfa__cases .bfa__case {
+    flex: 1;
+  }
+}
+
+/* 中間CTA・最終CTA: 白シャドウ範囲を狭く */
+.cta-mid .btn-primary,
+.cta-final .btn-primary {
+  box-shadow:
+    0 15px 35px rgba(248, 121, 104, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 20px 6px rgba(255, 255, 255, 1);
+}
+
+/* FV内CTAボタン: 白シャドウを控えめに（注釈が見えるよう） */
+.fv__cta .btn-primary {
+  box-shadow:
+    0 15px 35px rgba(248, 121, 104, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 15px 4px rgba(255, 255, 255, 0.5);
+}
+
+/* スマホ: 中間CTA・最終CTAボタンを上に移動、テキストを下に移動 */
+@media (max-width: 767px) {
+  .cta-mid__btn-area,
+  .cta-final__btn-area {
+    bottom: calc(5% + 20px);
+  }
+  .cta-mid .section-inner,
+  .cta-final .section-inner {
+    top: 20px;
+  }
+}
+
+/* CTAボタン ふわふわアニメーション（固定CTA除く） */
+@keyframes btn-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.fv__cta:not(.fv__cta--pc-fixed) .btn-primary,
+.cta-mid__btn-area .btn-primary,
+.cta-final__btn-area .btn-primary,
+.cta-mid .section-inner .btn-primary,
+.cta-final .section-inner .btn-primary {
+  animation: btn-float 3s ease-in-out infinite;
+}
+
+/* PC: 固定CTAの注釈を非表示 */
+@media (min-width: 768px) {
+  .fv__cta--pc-fixed .fv__cta-note {
+    display: none;
+  }
+}
+
+/* LINEボタン非表示 */
+.btn-line,
+.sticky-cta__btn--line {
+  display: none !important;
 }
 
 /* PC用CTAボタンサイズ */
