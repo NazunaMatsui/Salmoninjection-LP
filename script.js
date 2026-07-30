@@ -57,7 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
   faqItems.forEach(item => {
     const q = item.querySelector('.faq__q');
     if (!q) return;
-    q.addEventListener('click', () => item.classList.toggle('is-open'));
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      faqItems.forEach(other => other.classList.remove('is-open'));
+      if (!isOpen) item.classList.add('is-open');
+    });
   });
 
   /* ---------- Empathy Accordion ---------- */
