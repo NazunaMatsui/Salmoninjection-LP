@@ -6445,3 +6445,28 @@ body.drawer-open {
   .header__nav { display: none; }
 }
 
+/* Benefit：PC・タブレットで常に3列横並び・テキスト収まる */
+@media (min-width: 768px) {
+  .benefit__list,
+  .benefit__list--stairs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .benefit__item {
+    overflow: visible;
+    padding: 18% 8% 18%;
+  }
+  .benefit__title {
+    font-size: clamp(16px, 2.8vw, 38px);
+  }
+  .benefit__text {
+    font-size: clamp(11px, 1.1vw, 14px);
+    line-height: 1.8;
+  }
+  .benefit__decoration {
+    font-size: clamp(9px, 0.85vw, 11px);
+  }
+}
+
