@@ -8,15 +8,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Marcellus&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho&family=Caveat&family=Yomogi&family=Klee+One&family=Yusei+Magic&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260805b">
+<link rel="stylesheet" href="style.css?v=20260806i">
 <style>
-/* 600〜767px FVテキスト強制上書き */
-@media (min-width: 600px) and (max-width: 767px) {
-  .fv__title { font-size: 80px !important; }
-  .fv__lead { font-size: 22px !important; }
-  .fv__sub { font-size: 16px !important; }
-  .fv__copy { text-align: left !important; }
+/* FV：タブレット（768〜1024px）のみ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .fv__copy .fv__title,
+  .fv__title { font-size: clamp(44px, 6vw, 72px) !important; }
+  .fv__lead  { font-size: clamp(16px, 3vw, 22px) !important; }
+  .fv__sub   { font-size: clamp(13px, 2vw, 16px) !important; }
   .fv__scroll, .fv__scroll-line { display: none !important; }
+  .fv { background-image: url('images/fv-bg-pc.webp') !important; background-size: cover !important; background-position: center top !important; }
+  .fv__left-group { left: 36% !important; }
+  .fv__product-img { left: 68% !important; }
 }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
@@ -356,7 +359,7 @@
       </div>
       <div class="bfa__photos">
         <div class="bfa__photo-single">
-          <img src="images/before-after-front.webp?v=20260805-18" alt="使用前後（正面）" class="bfa__photo">
+          <img src="images/before-after-front.webp?v=20260806-12" alt="使用前後（正面）" class="bfa__photo">
         </div>
       </div>
       <p class="bfa__disclaimer">※使用前後の写真です　※効果には個人差があります</p>
@@ -386,7 +389,7 @@
       </div>
       <div class="bfa__photos">
         <div class="bfa__photo-single">
-          <img src="images/before-after-side-pc.webp?v=20260805-18" alt="使用前後（側面）" class="bfa__photo">
+          <img src="images/before-after-side-pc.webp?v=20260806-11" alt="使用前後（側面）" class="bfa__photo">
         </div>
       </div>
       <p class="bfa__disclaimer">※使用前後の写真です　※効果には個人差があります</p>

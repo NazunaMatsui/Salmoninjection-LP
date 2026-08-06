@@ -6259,7 +6259,7 @@ body.drawer-open {
   /* FV：商品画像をPCと同じ位置・サイズに */
   .fv__product-img { width: 60% !important; max-width: 460px !important; top: 45% !important; left: 40% !important; }
   /* FV：テキストを大きく */
-  .fv__copy .fv__title { font-size: 84px !important; }
+  .fv__copy .fv__title { font-size: clamp(52px, 8vw, 84px) !important; }
   .fv__lead { font-size: 22px !important; }
   .fv__sub { font-size: 16px !important; }
   /* FV：浮いている3つのチップを非表示 */
@@ -6271,7 +6271,7 @@ body.drawer-open {
   .fv__scroll-text { display: none !important; }
 
   /* FV：画像をやや縮小（ラインも追従） */
-  .fv__left-group { width: min(85%, 450px); left: 28%; top: 60px; }
+  .fv__left-group { width: min(85%, 450px); left: 44%; top: 60px; }
   .fv__col-img--pc-only { width: 130% !important; max-width: none !important; position: relative; top: -30px; left: 30px; }
   .fv__left-group .fv__col-img:nth-of-type(4),
   .fv__left-group .fv__col-img:nth-of-type(5) { position: relative; top: -60px; }
@@ -6530,26 +6530,3 @@ body.drawer-open {
 }
 
 /* FV：600〜767px */
-@media (min-width: 600px) and (max-width: 767px) {
-  /* SCROLLと線を非表示 */
-  .fv__scroll,
-  .fv__scroll-line,
-  .scroll-indicator,
-  .fv__scroll-text { display: none !important; }
-  /* テキストをPCと同じ左揃えに */
-  .fv__copy { text-align: left !important; }
-  .fv__copy .brand-mark,
-  .fv__copy .fv__lead,
-  .fv__copy .fv__title,
-  .fv__copy .fv__sub { text-align: left !important; }
-  .fv__tags { justify-content: flex-start !important; }
-  /* テキストサイズ大きく（固定値） */
-  .fv__title,
-  .fv__copy .fv__title { font-size: 80px !important; }
-  .fv__lead,
-  .fv__copy .fv__lead { font-size: 22px !important; }
-  .fv__sub,
-  .fv__copy .fv__sub { font-size: 16px !important; }
-  /* ボタンを下に */
-  .fv__cta { margin-top: 120px !important; }
-}
