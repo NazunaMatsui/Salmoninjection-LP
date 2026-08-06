@@ -2,13 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SC サーモン インジェクション | "白さ"ではなく、光を纏う肌へ。</title>
 <meta name="description" content="プロが選ぶ、サロン級の品質。PDRNコーティングスピキュール配合の塗るマイクロニードル美容液。1,980円(税込)で光を纏う肌へ。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Marcellus&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho&family=Caveat&family=Yomogi&family=Klee+One&family=Yusei+Magic&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20260806i">
+<link rel="stylesheet" href="style.css?v=20260806t">
 <style>
 /* FV：タブレット（768〜1024px）のみ */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -20,6 +23,73 @@
   .fv { background-image: url('images/fv-bg-pc.webp') !important; background-size: cover !important; background-position: center top !important; }
   .fv__left-group { left: 36% !important; }
   .fv__product-img { left: 68% !important; }
+}
+/* 中間CTA・最終CTA：タブレット（768〜1200px）調整 */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cta-mid,
+  .cta-final {
+    height: 720px !important;
+    min-height: unset !important;
+    background-size: 160% !important;
+    background-position: 80% 20% !important;
+  }
+  .cta-mid .section-inner,
+  .cta-final .section-inner {
+    position: absolute !important;
+    top: 80px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    visibility: visible !important;
+    padding: 0 40px !important;
+  }
+  .cta-mid .cta-mid__lead,
+  .cta-final .cta-mid__lead {
+    margin-top: 0 !important;
+    font-size: 34px !important;
+  }
+  .cta-mid .cta-mid__main,
+  .cta-final .cta-mid__main {
+    margin-top: 0 !important;
+    font-size: clamp(48px, 7vw, 72px) !important;
+  }
+  .cta-mid .cta-mid__sub,
+  .cta-final .cta-mid__sub {
+    font-size: 36px !important;
+  }
+  .cta-mid .cta-mid__price,
+  .cta-final .cta-mid__price {
+    font-size: clamp(72px, 11vw, 110px) !important;
+  }
+  .cta-mid__btn-area,
+  .cta-final__btn-area {
+    bottom: 4% !important;
+  }
+  .cta-mid__btn-area .btn-primary,
+  .cta-final__btn-area .btn-primary {
+    padding: 28px 72px !important;
+    font-size: 18px !important;
+  }
+  /* section-inner（テキスト）を非表示にしてimg-groupを活かす */
+  .cta-mid .section-inner,
+  .cta-final .section-inner {
+    display: none !important;
+  }
+  /* 塗った瞬間〜テキスト画像を上に移動・拡大 */
+  .cta-mid__deco-img2,
+  .cta-final .cta-mid__deco-img2 {
+    top: 38% !important;
+    left: 10% !important;
+    margin-left: 0 !important;
+    width: clamp(220px, 42vw, 500px) !important;
+  }
+  /* ¥1,980で〜テキスト画像 */
+  .cta-mid__deco-img3,
+  .cta-final .cta-mid__deco-img3 {
+    top: 54% !important;
+    left: 0% !important;
+    margin-left: 0 !important;
+  }
 }
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
@@ -1432,12 +1502,5 @@ document.addEventListener('DOMContentLoaded', function(){
   <p class="fv__cta-note">※Instagram #pdrn 投稿数61.3万件(2026年6月時点)</p>
 </div>
 
-<style>
-@media (min-width: 600px) and (max-width: 767px) {
-  .fv__title { font-size: 80px !important; }
-  .fv__lead { font-size: 22px !important; }
-  .fv__sub { font-size: 16px !important; }
-}
-</style>
 </body>
 </html>

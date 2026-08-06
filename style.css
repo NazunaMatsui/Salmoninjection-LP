@@ -6530,3 +6530,15 @@ body.drawer-open {
 }
 
 /* FV：600〜767px */
+
+/* Reason：タブレット（768〜1024px）各ブロック個別調整 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* 01（nth-child(2)）：見出し左 220px */
+  .reason__block:nth-child(2) { grid-template-columns: 220px 1fr !important; }
+  /* 02（nth-child(3)）：見出し右（反転）220px */
+  .reason__block:nth-child(3) { grid-template-columns: 1fr 220px !important; }
+  /* 03（nth-child(4)）：見出し左 220px */
+  .reason__block:nth-child(4) { grid-template-columns: 220px 1fr !important; }
+}
+
+/* 中間CTA・最終CTA：タブレット調整はindex.htmlのheadインラインスタイルで管理 */
