@@ -8,7 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Marcellus&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho&family=Caveat&family=Yomogi&family=Klee+One&family=Yusei+Magic&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20260805b">
+<style>
+/* 600〜767px FVテキスト強制上書き */
+@media (min-width: 600px) and (max-width: 767px) {
+  .fv__title { font-size: 80px !important; }
+  .fv__lead { font-size: 22px !important; }
+  .fv__sub { font-size: 16px !important; }
+  .fv__copy { text-align: left !important; }
+  .fv__scroll, .fv__scroll-line { display: none !important; }
+}
+</style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 </head>
 <body>
@@ -346,7 +356,7 @@
       </div>
       <div class="bfa__photos">
         <div class="bfa__photo-single">
-          <img src="images/before-after-front.webp" alt="使用前後（正面）" class="bfa__photo">
+          <img src="images/before-after-front.webp?v=20260805-18" alt="使用前後（正面）" class="bfa__photo">
         </div>
       </div>
       <p class="bfa__disclaimer">※使用前後の写真です　※効果には個人差があります</p>
@@ -376,7 +386,7 @@
       </div>
       <div class="bfa__photos">
         <div class="bfa__photo-single">
-          <img src="images/before-after-side-pc.webp" alt="使用前後（側面）" class="bfa__photo">
+          <img src="images/before-after-side-pc.webp?v=20260805-18" alt="使用前後（側面）" class="bfa__photo">
         </div>
       </div>
       <p class="bfa__disclaimer">※使用前後の写真です　※効果には個人差があります</p>
@@ -1419,5 +1429,12 @@ document.addEventListener('DOMContentLoaded', function(){
   <p class="fv__cta-note">※Instagram #pdrn 投稿数61.3万件(2026年6月時点)</p>
 </div>
 
+<style>
+@media (min-width: 600px) and (max-width: 767px) {
+  .fv__title { font-size: 80px !important; }
+  .fv__lead { font-size: 22px !important; }
+  .fv__sub { font-size: 16px !important; }
+}
+</style>
 </body>
 </html>

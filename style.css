@@ -5720,16 +5720,7 @@ body.drawer-open {
     grid-column: span 2;
   }
 
-  /* Benefit：スマホでは1列に */
-  .benefit__list--stairs {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .benefit__item--1,
-  .benefit__item--2,
-  .benefit__item--3 {
-    margin-top: 0;
-  }
+  /* Benefit：スマホでは1列に（この行は空） */
 
   /* メカニズムのタイムライン */
   .mechanism__t-item {
@@ -6255,8 +6246,29 @@ body.drawer-open {
    タブレット調整 (min-width: 768px) and (max-width: 1024px)
    ============================================================ */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* FV：メイン画像をやや拡大 */
-  .fv__product-img { width: 48%; max-width: 360px; }
+  /* FV：max-width:900pxで1列化されるのをタブレットでは2列に戻す */
+  .fv__layout { grid-template-columns: 1.1fr 0.9fr !important; gap: 60px !important; text-align: left !important; }
+  .fv__copy { text-align: left !important; }
+  .fv__copy .brand-mark,
+  .fv__copy .fv__lead,
+  .fv__copy .fv__title,
+  .fv__copy .fv__sub { text-align: left !important; }
+  .fv__tags { justify-content: flex-start !important; }
+  /* FV：product-imgの親(.fv__visual)が900px以下で非表示になるため再表示 */
+  .fv__visual { display: block !important; }
+  /* FV：商品画像をPCと同じ位置・サイズに */
+  .fv__product-img { width: 60% !important; max-width: 460px !important; top: 45% !important; left: 40% !important; }
+  /* FV：テキストを大きく */
+  .fv__copy .fv__title { font-size: 84px !important; }
+  .fv__lead { font-size: 22px !important; }
+  .fv__sub { font-size: 16px !important; }
+  /* FV：浮いている3つのチップを非表示 */
+  .fv__chip { display: none !important; }
+  /* FV：SCROLLテキストと線を非表示 */
+  .fv__scroll,
+  .fv__scroll-line,
+  .scroll-indicator,
+  .fv__scroll-text { display: none !important; }
 
   /* FV：画像をやや縮小（ラインも追従） */
   .fv__left-group { width: min(85%, 450px); left: 28%; top: 60px; }
@@ -6445,28 +6457,99 @@ body.drawer-open {
   .header__nav { display: none; }
 }
 
-/* Benefit：PC・タブレットで常に3列横並び・テキスト収まる */
-@media (min-width: 768px) {
+/* Benefit：タブレット（768〜1024px）は縦1列・コンテンツ中央寄せ */
+@media (min-width: 768px) and (max-width: 1024px) {
   .benefit__list,
   .benefit__list--stairs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .benefit__item {
-    overflow: visible;
-    padding: 18% 8% 18%;
+  .benefit__item,
+  .benefit__item--1,
+  .benefit__item--2,
+  .benefit__item--3 {
+    margin-top: 0;
+    overflow: hidden !important;
+    aspect-ratio: 1 / 1 !important;
+    padding: 10% 8% !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .benefit__inner {
+    justify-content: center !important;
+    height: auto !important;
+  }
+  .benefit__icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    margin-bottom: 10px !important;
+  }
+  .benefit__icon-svg {
+    width: 32px !important;
+    height: 32px !important;
   }
   .benefit__title {
-    font-size: clamp(16px, 2.8vw, 38px);
+    font-size: clamp(24px, 4.8vw, 40px) !important;
+    margin-bottom: 10px !important;
+    line-height: 1.4 !important;
   }
   .benefit__text {
-    font-size: clamp(11px, 1.1vw, 14px);
-    line-height: 1.8;
+    font-size: clamp(12px, 1.5vw, 15px) !important;
+    line-height: 1.8 !important;
   }
   .benefit__decoration {
-    font-size: clamp(9px, 0.85vw, 11px);
+    font-size: clamp(9px, 1vw, 11px) !important;
+    margin-top: 12px !important;
   }
 }
 
+/* スマホ全域：SCROLLと線を非表示 */
+@media (max-width: 767px) {
+  .fv__scroll,
+  .fv__scroll-line,
+  .scroll-indicator,
+  .fv__scroll-text { display: none !important; }
+}
+
+/* Benefit：スマホ（〜767px）は1列に */
+@media (max-width: 767px) {
+  .benefit__list,
+  .benefit__list--stairs {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+  }
+  .benefit__item--1,
+  .benefit__item--2,
+  .benefit__item--3 {
+    margin-top: 0 !important;
+  }
+}
+
+/* FV：600〜767px */
+@media (min-width: 600px) and (max-width: 767px) {
+  /* SCROLLと線を非表示 */
+  .fv__scroll,
+  .fv__scroll-line,
+  .scroll-indicator,
+  .fv__scroll-text { display: none !important; }
+  /* テキストをPCと同じ左揃えに */
+  .fv__copy { text-align: left !important; }
+  .fv__copy .brand-mark,
+  .fv__copy .fv__lead,
+  .fv__copy .fv__title,
+  .fv__copy .fv__sub { text-align: left !important; }
+  .fv__tags { justify-content: flex-start !important; }
+  /* テキストサイズ大きく（固定値） */
+  .fv__title,
+  .fv__copy .fv__title { font-size: 80px !important; }
+  .fv__lead,
+  .fv__copy .fv__lead { font-size: 22px !important; }
+  .fv__sub,
+  .fv__copy .fv__sub { font-size: 16px !important; }
+  /* ボタンを下に */
+  .fv__cta { margin-top: 120px !important; }
+}
