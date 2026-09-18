@@ -2183,8 +2183,19 @@ em { font-style: italic; font-weight: 400; }
   font-size: 14px;
   color: var(--text-light);
   letter-spacing: 0.12em;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
   margin-top: -16px;
+}
+
+.howto__video {
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.howto__video video {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
 }
 
 /* 使用上の注意 */
